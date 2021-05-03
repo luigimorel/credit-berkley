@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) =>
         boxContainer: {
             width: '537px',
             height: '611',
-            marginTop: '241px',
-            marginBottom: '241px',
+            marginTop: "100px",
+            marginBottom: "100px",
 
             boxShadow:
                 '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -34,23 +34,18 @@ const useStyles = makeStyles((theme) =>
             paddingBottom: '80px',
         },
         logoContainer: {
-            marginRight: '162px',
-            marginTop: '348px',
-            marginBottom: '347px',
-
+            margin: "0 100px 0 100px",
             [theme.breakpoints.down('sm')]: {
-                marginLeft: 0,
-                marginBottom: '1rem',
-                marginTop: '40px',
+                margin: "2rem 2rem"
             },
         },
         // logo: {
         //     width: '403px',
         //     height: '284px',
-        //     // [theme.breakpoints.down('md')]: {
-        //     //     width: "300px",
-        //     //     height: "150px"
-        //     // }
+            // [theme.breakpoints.down('md')]: {
+            //     width: "300px",
+            //     height: "150px"
+            // }
         // },
         header: {
             textTransform: 'uppercase',
