@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import UserLogin from "./accounts/login/login";
+import { Route, Switch } from "react-router";
+import FindAccount from "./accounts/findAccount/findAccount";
+import SignUp from "./accounts/signup/signUp";
+import ResetPassword from "./accounts/resetPassword/resetPassword";
+import Feed from "./ui/feed-ui/feed";
+import SignUpSecondary from './accounts/secSignUp/secSignUp'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/" component={UserLogin} />
+        <Route exact path="/create-account" component={SignUp} />
+        <Route exact path="/reset-password" component={FindAccount} />
+        <Route exact path="/find-account" component={ResetPassword} />
+        <Route exact path="/sec-signup" component={SignUpSecondary} />
+        <Route exact path="/feed" component={Feed} />
+      </Switch>
+    </>
   );
-}
+};
 
 export default App;
