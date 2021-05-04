@@ -4,7 +4,7 @@ import React from 'react';
 import Topbar from './components/topBarComponent';
 import Sidebar from './components/sidebarComponent';
 import FeedCategoriesBtns from './components/feedCategories';
-import FeedsCard from './feedsCard';
+import FeedsCard from './components/feedsCard';
 import Discussions from './components/discussions';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: '60px',
         },
     },
-    toolbarContainer: {},
     sidebar: {
         width: '60px',
     },
@@ -40,7 +39,7 @@ const MainFeed = () => {
     const classes = useStyles();
     return (
         <div className={classes.mainContainer}>
-            <div className={classes.toolbarContainer}>
+            <div>
                 <Topbar />
             </div>
 

@@ -1,9 +1,9 @@
-import { makeStyles, Typography, Button, Box } from '@material-ui/core';
 import React from 'react';
+import { makeStyles, Typography, Button, Box } from '@material-ui/core';
 import { format } from 'date-fns';
 
-import img from '../../assets/img.jpg';
-import { ReactComponent as LightningIcon } from '../../assets/feedIcons/Lightining-icon.svg';
+import img from '../../../assets/img.jpg';
+import { ReactComponent as LightningIcon } from '../../../assets//feedIcons/Lightining-icon.svg';
 
 const useStyles = makeStyles({
     feedCard: {
