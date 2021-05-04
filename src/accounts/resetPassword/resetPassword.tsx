@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '30px',
         },
     },
+    
     infoText: {
         margin: '.5rem 0 .5rem 5.5rem',
         width: '309px',
@@ -142,6 +143,7 @@ const useStyles = makeStyles((theme) => ({
             width: '280px',
         },
     },
+
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         top: '0px',

@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) =>
             alignItems: 'center',
             flexDirection: 'row',
         },
+        
         boxContainer: {
             width: '537px',
             height: '611px',
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) =>
                 width: '340px',
             },
         },
+
         logoContainer: {
             margin: '0 100px 0 100px',
             [theme.breakpoints.down('sm')]: {
@@ -52,12 +54,14 @@ const useStyles = makeStyles((theme) =>
                 margin: 0,
             },
         },
+
         descText: {
             fontSize: '17px',
             letterSpacing: 0,
             color: '#282728',
             opacity: 1,
         },
+
         inputField: {
             width: '335px',
             fontSize: '1rem',
@@ -72,6 +76,7 @@ const useStyles = makeStyles((theme) =>
                 width: '280px',
             },
         },
+
         btnLogin: {
             width: '335px',
             height: '66px',
@@ -89,6 +94,7 @@ const useStyles = makeStyles((theme) =>
                 marginTop: '30px',
             },
         },
+
         btnCreateAccount: {
             width: '335px',
             height: '66px',
@@ -104,6 +110,7 @@ const useStyles = makeStyles((theme) =>
                 width: '280px',
             },
         },
+
         mainContainer: {
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             top: '0px',
