@@ -23,11 +23,11 @@ const useStyles = makeStyles((theme) =>
         boxContainer: {
             width: '537px',
             height: '611px',
-            margin: "100px 0",
+            margin: '100px 0',
             boxShadow:
                 '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
             opacity: '1',
-            textAlign: 'center',    
+            textAlign: 'center',
             paddingBottom: '80px',
             [theme.breakpoints.down('sm')]: {
                 height: 'auto',
@@ -107,7 +107,9 @@ const useStyles = makeStyles((theme) =>
         mainContainer: {
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             top: '0px',
-            minHeight: '100%',
+            [theme.breakpoints.down('xs')]: {
+                margin: '0 auto',
+            },
         },
     }),
 );
