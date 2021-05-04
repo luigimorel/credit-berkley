@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
-    emojiButtons: {},
+    emojiButtons: { marginBottom: '9px' },
     emojiContainer: {
         display: 'flex',
         justifyItems: 'flex-start',

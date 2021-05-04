@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 import Sidebar from '../feed-ui/components/sidebarComponent';
 import TopBar from '../feed-ui/components/topBarComponent';
+import FeedsCard from "../feed-ui/components/feedsCard";
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -14,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
     },
     sidebar: {
         width: '60px',
+    },
+    dashboardContainer: {
+        marginLeft: '100px',
+        width: '845px',
+        [theme.breakpoints.down('md')]: {
+            width: '200px',
+            marginLeft: '10px',
+        },
     },
 }));
 const Dashboard = () => {
@@ -29,7 +38,11 @@ const Dashboard = () => {
                     <Sidebar />
                 </div>
             </Box>
-            <Sidebar />
+            <Box className={classes.dashboardContainer}>
+             
+                    
+                        <FeedsCard />
+            </Box>
         </div>
     );
 };
