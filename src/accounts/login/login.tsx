@@ -23,30 +23,25 @@ const useStyles = makeStyles((theme) =>
         },
         boxContainer: {
             width: '537px',
-            height: '611',
-            marginTop: "100px",
-            marginBottom: "100px",
-
+            height: '611px',
+            margin: "100px 0",
             boxShadow:
                 '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
             opacity: '1',
-            textAlign: 'center',
+            textAlign: 'center',    
             paddingBottom: '80px',
-        },
-        logoContainer: {
-            margin: "0 100px 0 100px",
             [theme.breakpoints.down('sm')]: {
-                margin: "2rem 2rem"
+                height: 'auto',
+                width: '340px',
             },
         },
-        // logo: {
-        //     width: '403px',
-        //     height: '284px',
-            // [theme.breakpoints.down('md')]: {
-            //     width: "300px",
-            //     height: "150px"
-            // }
-        // },
+        logoContainer: {
+            margin: '0 100px 0 100px',
+            [theme.breakpoints.down('sm')]: {
+                margin: '2rem auto 0 auto',
+            },
+        },
+
         header: {
             textTransform: 'uppercase',
             color: '#29A475',
@@ -83,7 +78,7 @@ const useStyles = makeStyles((theme) =>
             height: '66px',
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             boxShadow:
-                'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+                '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
             borderRadius: '10px',
             color: '#1D9F6EA2',
             fontSize: '1rem',
@@ -143,14 +138,11 @@ const UserLogin = () => {
                 container
                 className={classes.container}
                 lg={12}
-                md={6}
+                md={12}
                 sm={12}
             >
                 <Grid item className={classes.logoContainer}>
-                    <img
-                        src={logo}
-                        alt="Credit Berkley"
-                    />
+                    <img src={logo} alt="Credit Berkley" />
                 </Grid>
 
                 <Grid item className={classes.boxContainer}>
@@ -208,7 +200,6 @@ const UserLogin = () => {
                             to="/create-account"
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
-                            {' '}
                             <b>Create Account</b>
                         </Link>
                     </Button>

@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         opacity: 1,
         width: '60%',
+        [theme.breakpoints.down('sm')]: {
+            width: 'auto',
+        },
     },
     img: {
         display: 'block',
@@ -43,7 +46,11 @@ const useStyles = makeStyles((theme) => ({
     infoText: {
         color: '#282728',
         fontSize: '20px',
-        marginLeft: '40.71px',
+        margin: '0 20px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '18px',
+            marginBottom: '100px',
+        },
     },
     heading: {
         color: '#1D9F6E',
@@ -55,24 +62,37 @@ const useStyles = makeStyles((theme) => ({
     },
     formContainer: {
         display: 'flex',
-        marginLeft: '50px',
-        marginRight: '50px',
+        margin: '0 3.4rem 0 3.4rem',
         flexDirection: 'row',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            margin: '0',
+            height: 'auto',
+            width: '350px',
+        },
     },
     textContainer: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
         flexDirection: 'row',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+            width: '350px',
+            textWrap: 'no-wrap',
+        },
     },
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         top: '0px',
-        marginBottom: '22px',
+        margin: "0 auto"
     },
     signUpContainer: {
         height: '180px',
         borderRadius: '10px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+        },
     },
     sideText: {
         marginTop: '30px',
@@ -88,6 +108,11 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: '30px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '10px',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+            width: '340px',
+            marginLeft: 'auto',
+        },
     },
     signInWithHeading: {
         color: '#1D9F6E',
@@ -102,6 +127,9 @@ const useStyles = makeStyles((theme) => ({
         width: '335px',
         margin: theme.spacing(2),
         boxShadow: '3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+        [theme.breakpoints.down('sm')]: {
+            width: '280px',
+        },
     },
 
     registerBtn: {
@@ -116,6 +144,10 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bolder',
         textTransform: 'capitalize',
         marginBottom: '74px',
+        [theme.breakpoints.down('sm')]: {
+            width: '280px',
+            marginTop: '30px',
+        },
     },
     registerContainer: {
         margin: '0 auto',
@@ -127,8 +159,13 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: 1,
+        margin: '100px 0',
         paddingTop: '1px',
         position: 'relative',
+        [theme.breakpoints.down('sm')]: {
+            height: 'auto',
+            width: '340px',
+        },
     },
 
     sectionHeading: {
@@ -145,23 +182,37 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         marginRight: '40.71px',
     },
+
     inputField: {
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '10px',
         padding: '10px 10px 10px 35.46px',
         height: '75px',
+        width: '335px',
+        [theme.breakpoints.down('sm')]: {
+            width: '280px',
+        },
     },
     inputTextField: {
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         height: '75px',
         borderRadius: '10px',
+        width: '335px',
+        [theme.breakpoints.down('sm')]: {
+            width: '280px',
+        },
     },
     inputFieldSelect: {
-        padding: '10px',
+        padding: "10px",
         height: '75px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        width: '335px',
+        [theme.breakpoints.down('sm')]: {
+            padding: '0px',
+            width: '280px',
+        },
     },
 
     label: {
@@ -169,9 +220,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 'bolder',
         marginTop: '20px',
         marginBottom: '25px',
-    },
-    formControl: {
-        margin: theme.spacing(2)
     },
     termsLink: {
         right: 0,
@@ -232,7 +280,7 @@ const SignUpSecondary = () => {
                 />
             </div>
 
-            <Grid md={12} sm={12} lg={6} className={classes.formContainer}>
+            <Grid md={6} sm={12} lg={12} className={classes.formContainer}>
                 <Grid item className={classes.form}>
                     <div className={classes.signUpContainer}>
                         <div className={classes.textContainer}>
@@ -349,8 +397,7 @@ const SignUpSecondary = () => {
 
                                     <Select
                                         className={clsx(
-                                            classes.inputFieldSelect,
-                                            classes.formControl,
+                                            classes.inputFieldSelect
                                         )}
                                         value={formik.values.country}
                                         inputProps={{
@@ -441,8 +488,7 @@ const SignUpSecondary = () => {
 
                                     <Select
                                         className={clsx(
-                                            classes.inputFieldSelect,
-                                            classes.formControl,
+                                            classes.inputFieldSelect
                                         )}
                                         displayEmpty
                                         value={formik.values.financialGoal}

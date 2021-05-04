@@ -22,25 +22,24 @@ const useStyles = makeStyles((theme) => ({
     },
 
     boxContainer: {
-        width: '500px',
-        height: 'auto',
-        fontWeight: '900',
+        width: '537px',
+        height: '611px',
+        marginTop: '100px',
+        marginBottom: '100px',
+        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
-        alignItems: 'center',
         textAlign: 'center',
+        paddingBottom: '80px',
         [theme.breakpoints.down('sm')]: {
-            margin: '20px 20px 20px 40px',
-            width: '400px',
+            height: 'auto',
+            width: '340px',
         },
     },
 
     logoContainer: {
-        marginLeft: '200px',
-        [theme.breakpoints.down('md')]: {
-            marginLeft: 0,
-            marginTop: '40px',
-            marginBottom: '1rem',
-            marginLeft: '100px',
+        margin: '0 100px 0 100px',
+        [theme.breakpoints.down('sm')]: {
+            margin: '2rem auto 0 auto',
         },
     },
 
@@ -86,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         height: '66px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         boxShadow:
-            'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+            '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '10px',
         color: '#1D9F6EA2',
         fontSize: '1rem',
@@ -147,8 +146,6 @@ const SignUp = () => {
                 <Grid item className={classes.logoContainer}>
                     <img
                         src={logo}
-                        width={503}
-                        height={384}
                         alt="Credit Berkley"
                     />
                 </Grid>
@@ -177,7 +174,7 @@ const SignUp = () => {
                             type="text"
                             value={formik.values.password}
                             placeholder="Password"
-                            onChange={(event) => setEmail(event.target.value)}
+                            onChange={(event) => setPassword(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
@@ -185,7 +182,7 @@ const SignUp = () => {
                             type="text"
                             value={formik.values.confirmPassword}
                             placeholder="Confirm Password"
-                            onChange={(event) => setEmail(event.target.value)}
+                            onChange={(event) => setConfirmPassword(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
@@ -193,7 +190,7 @@ const SignUp = () => {
                             type="text"
                             value={formik.values.channel}
                             placeholder="How did you hear about us?"
-                            onChange={(event) => setEmail(event.target.value)}
+                            onChange={(event) => setChannel(event.target.value)}
                         />
                         <Typography component="p" className={classes.infoText}>
                             By clicking Create Account; I accept the terms of
@@ -209,7 +206,8 @@ const SignUp = () => {
                             to="login"
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
-                            <b>Sign In</b>{' '}
+                            {'   '} 
+                            <b>Sign In</b>
                         </Link>
                     </Typography>
                 </Grid>
