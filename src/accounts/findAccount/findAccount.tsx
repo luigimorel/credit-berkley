@@ -150,7 +150,6 @@ const FindAccount = () => {
                       autoComplete="email"
                       type="text"
                       placeholder="Email"
-                      value={formik.values.email}
                       onChange={(event) => setEmail(event.target.value)}
                   />
 

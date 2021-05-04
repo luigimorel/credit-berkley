@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) =>
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-evenly',
             flexDirection: 'row',
         },
         boxContainer: {
@@ -112,10 +111,11 @@ const useStyles = makeStyles((theme) =>
         },
     }),
 );
-const UserLogin = () => {
+export default function UserLogin  () {
     const classes = useStyles();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [disable, setDisable] = useState('')
 
     const formik = useFormik({
         initialValues: {
@@ -131,6 +131,10 @@ const UserLogin = () => {
         const regexPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return regexPattern.test(String(email).toLowerCase());
     };
+
+    const handleLogIn = async (event: React.FormEvent) => {
+        event.preventDefault();
+    }
 
     return (
         <div className={classes.mainContainer}>
@@ -150,13 +154,13 @@ const UserLogin = () => {
                         Log In
                     </Typography>
 
-                    <form onSubmit={formik.handleSubmit}>
+                    <form onSubmit={handleLogIn}>
                         <InputBase
                             className={classes.inputField}
                             autoComplete="email"
+                            required
                             type="text"
                             placeholder="Username or Email"
-                            value={formik.values.email}
                             onChange={(event) => setEmail(event.target.value)}
                         />
 
@@ -165,22 +169,18 @@ const UserLogin = () => {
                             autoComplete="current-password"
                             type="password"
                             placeholder="Password"
-                            value={formik.values.password}
+                            required
                             onChange={(event) =>
                                 setPassword(event.target.value)
                             }
                         />
 
-                        <Button fullWidth className={classes.btnLogin}>
-                            <Link
-                                to="/login"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
-                            >
-                                <b> Log In</b>
-                            </Link>
+                        <Button fullWidth
+                            className={classes.btnLogin}
+                        >
+                          
+                               
+                                 Log In
                         </Button>
                     </form>
                     <Typography
@@ -209,4 +209,3 @@ const UserLogin = () => {
     );
 };
 
-export default UserLogin;

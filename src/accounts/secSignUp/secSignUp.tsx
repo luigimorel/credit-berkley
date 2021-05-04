@@ -71,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
             width: '350px',
         },
     },
+
     textContainer: {
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -81,11 +82,13 @@ const useStyles = makeStyles((theme) => ({
             textWrap: 'no-wrap',
         },
     },
+
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         top: '0px',
         margin: "0 auto"
     },
+
     signUpContainer: {
         height: '180px',
         borderRadius: '10px',
@@ -94,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
             height: 'auto',
         },
     },
+
     sideText: {
         marginTop: '30px',
         fontSize: '16px',
@@ -114,6 +118,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: 'auto',
         },
     },
+
     signInWithHeading: {
         color: '#1D9F6E',
         fontSize: '20px',
@@ -121,6 +126,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         fontWeight: 'bolder',
     },
+
     signInWithButtons: {
         height: '66px',
         borderRadius: '10px',
@@ -149,11 +155,13 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '30px',
         },
     },
+
     registerContainer: {
         margin: '0 auto',
         display: 'block',
         textAlign: 'center',
     },
+
     formInputContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         borderRadius: '10px',
@@ -170,7 +178,7 @@ const useStyles = makeStyles((theme) => ({
 
     sectionHeading: {
         color: '#1D9F6E',
-        fontSize: '20px',
+        fontSize: '20px',                                                               
         marginTop: '30px',
         marginLeft: '40.71px',
         fontWeight: 'bolder',

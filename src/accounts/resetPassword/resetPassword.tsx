@@ -16,30 +16,29 @@ const useStyles = makeStyles((theme) => ({
     container: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         display: 'flex',
-        minHeight: '100%',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
         flexDirection: 'row',
+        justifyContent:"center"
     },
 
     boxContainer: {
-        width: '500px',
-        height: 'auto',
+        width: '537px',
+        height: '611px',
+        margin: '100px 0',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
-        alignItems: 'center',
         textAlign: 'center',
+        paddingBottom: '80px',
         [theme.breakpoints.down('sm')]: {
-            margin: '20px 20px 20px 20px',
+            height: 'auto',
+            width: '340px',
         },
     },
 
     logoContainer: {
-        marginLeft: '200px',
+        margin: '0 100px 0 100px',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: 0,
-            marginTop: '40px',
-            marginBottom: '1rem',
+            margin: '2rem auto 0 auto',
         },
     },
 
@@ -69,13 +68,11 @@ const useStyles = makeStyles((theme) => ({
         width: '335px',
         fontSize: '1rem',
         height: '69px',
+        borderRadius: '7px',
         boxShadow:
-            'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+            'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         marginTop: '15px',
         padding: ' 0 0 0 40px ',
-        borderRadius: '10px',
-        marginRight: '10px',
-        marginLeft: '10px',
         color: '#707070',
         [theme.breakpoints.down('sm')]: {
             width: '280px',
@@ -87,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         marginTop: '40px',
-        alignItems: 'center',
+        justifyContent: 'center',
         marginBottom: '20px',
         color: '#707070',
         [theme.breakpoints.down('sm')]: {
@@ -97,16 +94,16 @@ const useStyles = makeStyles((theme) => ({
     },
 
     otpInputField: {
-        width: '60px',
+        width: 'auto',
         fontSize: '16px',
-        height: '60px',
+        height: '69px',
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         display: 'flex',
         alignItems: 'center',
         borderRadius: '10px',
-        margin: '4px 10px 4px 30px',
         position: 'relative',
+        marginRight: '40px',
         color: '#707070',
         [theme.breakpoints.down('sm')]: {
             width: '60px',
@@ -119,8 +116,7 @@ const useStyles = makeStyles((theme) => ({
         width: '335px',
         height: '66px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
-        boxShadow:
-            'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+        boxShadow: '3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '10px',
         color: '#1D9F6EA2',
         fontSize: '1rem',
@@ -146,6 +142,13 @@ const useStyles = makeStyles((theme) => ({
             width: '280px',
         },
     },
+    mainContainer: {
+        background: '#ECF3FD 0% 0% no-repeat padding-box',
+        top: '0px',
+        [theme.breakpoints.down('xs')]: {
+            margin: "0 auto"
+        }
+    },
 }));
 
 const ResetPassword = () => {
@@ -163,7 +166,7 @@ const ResetPassword = () => {
     const values = otpValue.split('');
 
     return (
-        <>
+        <div className={classes.mainContainer}>
             <Grid
                 container
                 className={classes.container}
@@ -176,51 +179,55 @@ const ResetPassword = () => {
                 </Grid>
 
                 <Grid item className={classes.boxContainer}>
-                    <Typography
-                        component="p"
-                        className={classes.header}
-                    >
+                    <Typography component="p" className={classes.header}>
                         Reset Account Password{' '}
                     </Typography>
+                    <form>
+                        <Box className={classes.otpWrapper}>
+                            {CODE_LENGTH.map((v, index) => {
+                                return (
+                                    <InputBase
+                                        className={classes.otpInputField}
+                                        inputProps={{ maxLength: 1 }}
+                                        type="number"
+                                        onChange={(event) =>
+                                            setOtpValue(event.target.value)
+                                        }
+                                    />
+                                );
+                            })}
+                        </Box>
+                        <InputBase
+                            className={classes.inputField}
+                            type="text"
+                            placeholder="New Password"
+                            onChange={(event) =>
+                                setPassword(event.target.value)
+                            }
+                        />
 
-                    <Box className={classes.otpWrapper}>
-                        {CODE_LENGTH.map((v, index) => {
-                            return (
-                                <InputBase
-                                    className={classes.otpInputField}
-                                    inputProps={{ maxLength: 1 }}
-                                    type="text"
-                                    onChange={(event) =>
-                                        setOtpValue(event.target.value)
-                                    }
-                                />
-                            );
-                        })}
-                    </Box>
-                    <InputBase
-                        className={classes.inputField}
-                        type="text"
-                        placeholder="New Password"
-                        onChange={(event) => setPassword(event.target.value)}
-                    />
-
-                    <Button
-                        className={classes.btnFindAccount}
-                        style={{ margin: '2rem 0 2rem 0' }}
-                    >
-                        <Link to="reset-password"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
+                        <Button
+                            className={classes.btnFindAccount}
+                            style={{ margin: '2rem 0 2rem 0' }}
                         >
-                            <b>Reset</b>
-                        </Link>
-                    </Button>
+                            <Link
+                                to="reset-password"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <b>Reset</b>
+                            </Link>
+                        </Button>
+                    </form>
 
                     <Button className={classes.btnCancel}>
                         Look Up Your Account
                     </Button>
                 </Grid>
             </Grid>
-        </>
+        </div>
     );
 };
 

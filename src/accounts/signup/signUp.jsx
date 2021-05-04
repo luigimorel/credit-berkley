@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
 
     boxContainer: {
         width: '537px',
-        height: '611px',
         marginTop: '100px',
         marginBottom: '100px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -162,33 +161,28 @@ const SignUp = () => {
                     <form onSubmit={formik.handleSubmit}>
                         <InputBase
                             className={classes.inputField}
-                            autoComplete
+                            autoComplete="emial"
                             type="text"
                             placeholder="Email"
-                            value={formik.values.email}
                             onChange={(event) => setEmail(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
                             autoComplete
                             type="text"
-                            value={formik.values.password}
                             placeholder="Password"
                             onChange={(event) => setPassword(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
-                            autoComplete
+                            autoComplete="current-password"
                             type="text"
-                            value={formik.values.confirmPassword}
                             placeholder="Confirm Password"
                             onChange={(event) => setConfirmPassword(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
-                            autoComplete
                             type="text"
-                            value={formik.values.channel}
                             placeholder="How did you hear about us?"
                             onChange={(event) => setChannel(event.target.value)}
                         />
