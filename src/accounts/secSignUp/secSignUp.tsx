@@ -15,8 +15,8 @@ import {
 import { Link } from 'react-router-dom';
 
 import { useFormik } from 'formik';
-import clsx from 'clsx'
-import { FaGoogle,  } from 'react-icons/fa';
+import clsx from 'clsx';
+import { FaGoogle } from 'react-icons/fa';
 import Facebook from '@material-ui/icons/Facebook';
 import { FaPlus } from 'react-icons/fa';
 
@@ -29,8 +29,10 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         opacity: 1,
         width: '60%',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: 'auto',
+            flexDirection: "row",
+            margin: '0 auto',
         },
     },
     img: {
@@ -65,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 3.4rem 0 3.4rem',
         flexDirection: 'row',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column',
-            margin: '0',
+            flexDirection: " column",
+            margin: '0 auto',
             height: 'auto',
             width: '350px',
         },
@@ -86,15 +88,20 @@ const useStyles = makeStyles((theme) => ({
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         top: '0px',
-        margin: "0 auto"
+        [theme.breakpoints.down('sm')]: {
+            margin: '0 auto ',
+            paddingBottom: '80px',
+        },
     },
 
     signUpContainer: {
-        height: '180px',
+        height: '200px',
         borderRadius: '10px',
+        paddingBottom: "20px",
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             height: 'auto',
+            marginBottom: '1rem',
         },
     },
 
@@ -113,7 +120,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '10px',
         [theme.breakpoints.down('sm')]: {
-            height: 'auto',
             width: '340px',
             marginLeft: 'auto',
         },
@@ -167,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: 1,
-        margin: '100px 0',
+        marginTop: "10px",
         paddingTop: '1px',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
@@ -178,7 +184,7 @@ const useStyles = makeStyles((theme) => ({
 
     sectionHeading: {
         color: '#1D9F6E',
-        fontSize: '20px',                                                               
+        fontSize: '20px',
         marginTop: '30px',
         marginLeft: '40.71px',
         fontWeight: 'bolder',
@@ -197,7 +203,6 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         padding: '10px 10px 10px 35.46px',
         height: '75px',
-        width: '335px',
         [theme.breakpoints.down('sm')]: {
             width: '280px',
         },
@@ -207,16 +212,14 @@ const useStyles = makeStyles((theme) => ({
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         height: '75px',
         borderRadius: '10px',
-        width: '335px',
         [theme.breakpoints.down('sm')]: {
             width: '280px',
         },
     },
     inputFieldSelect: {
-        padding: "10px",
+        padding: '10px',
         height: '75px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-        width: '335px',
         [theme.breakpoints.down('sm')]: {
             padding: '0px',
             width: '280px',
@@ -341,7 +344,7 @@ const SignUpSecondary = () => {
                                     <InputBase
                                         className={classes.inputField}
                                         autoComplete="email"
-                                        type="text"
+                                        type="email"
                                         value={formik.values.email}
                                         placeholder="Username or Email"
                                         onChange={(event) =>
@@ -405,7 +408,7 @@ const SignUpSecondary = () => {
 
                                     <Select
                                         className={clsx(
-                                            classes.inputFieldSelect
+                                            classes.inputFieldSelect,
                                         )}
                                         value={formik.values.country}
                                         inputProps={{
@@ -496,7 +499,7 @@ const SignUpSecondary = () => {
 
                                     <Select
                                         className={clsx(
-                                            classes.inputFieldSelect
+                                            classes.inputFieldSelect,
                                         )}
                                         displayEmpty
                                         value={formik.values.financialGoal}

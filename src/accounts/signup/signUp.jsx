@@ -23,8 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
     boxContainer: {
         width: '537px',
-        marginTop: '100px',
-        marginBottom: '100px',
+       margin: "100px 30px",
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
         textAlign: 'center',
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             height: 'auto',
             width: '340px',
+            margin: "50px 15px"
         },
     },
 
@@ -45,12 +45,11 @@ const useStyles = makeStyles((theme) => ({
     header: {
         textTransform: 'uppercase',
         color: '#29A475',
-        marginTop: '100px',
-        marginBottom: '30px',
+        margin: '50px 15px',
         fontSize: '20px',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-            margin: 0,
+            margin: "25px 0",
         },
     },
 
@@ -83,8 +82,7 @@ const useStyles = makeStyles((theme) => ({
         width: '335px',
         height: '66px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
-        boxShadow:
-            '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '10px',
         color: '#1D9F6EA2',
         fontSize: '1rem',
@@ -143,10 +141,7 @@ const SignUp = () => {
                 sm={12}
             >
                 <Grid item className={classes.logoContainer}>
-                    <img
-                        src={logo}
-                        alt="Credit Berkley"
-                    />
+                    <img src={logo} alt="Credit Berkley" />
                 </Grid>
 
                 <Grid item className={classes.boxContainer}>
@@ -171,14 +166,18 @@ const SignUp = () => {
                             autoComplete
                             type="text"
                             placeholder="Password"
-                            onChange={(event) => setPassword(event.target.value)}
+                            onChange={(event) =>
+                                setPassword(event.target.value)
+                            }
                         />
                         <InputBase
                             className={classes.inputField}
                             autoComplete="current-password"
                             type="text"
                             placeholder="Confirm Password"
-                            onChange={(event) => setConfirmPassword(event.target.value)}
+                            onChange={(event) =>
+                                setConfirmPassword(event.target.value)
+                            }
                         />
                         <InputBase
                             className={classes.inputField}
@@ -200,7 +199,7 @@ const SignUp = () => {
                             to="login"
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
-                            {'   '} 
+                            {'   '}
                             <b>Sign In</b>
                         </Link>
                     </Typography>

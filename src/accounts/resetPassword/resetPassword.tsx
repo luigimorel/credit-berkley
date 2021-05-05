@@ -18,19 +18,20 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent:"center"
+        justifyContent: 'center',
     },
 
     boxContainer: {
         width: '537px',
         height: '611px',
-        margin: '100px 0',
+       margin: "100px 30px",
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
         textAlign: 'center',
         paddingBottom: '80px',
         [theme.breakpoints.down('sm')]: {
             height: 'auto',
+            margin: "50px 15px",
             width: '340px',
         },
     },
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '30px',
         },
     },
-    
+
     infoText: {
         margin: '.5rem 0 .5rem 5.5rem',
         width: '309px',
@@ -148,8 +149,8 @@ const useStyles = makeStyles((theme) => ({
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         top: '0px',
         [theme.breakpoints.down('xs')]: {
-            margin: "0 auto"
-        }
+            margin: '0 auto',
+        },
     },
 }));
 
@@ -182,7 +183,7 @@ const ResetPassword = () => {
 
                 <Grid item className={classes.boxContainer}>
                     <Typography component="p" className={classes.header}>
-                        Reset Account Password{' '}
+                        <b>Reset Account Password</b>
                     </Typography>
                     <form>
                         <Box className={classes.otpWrapper}>
