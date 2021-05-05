@@ -31,18 +31,20 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         flexDirection: 'row',
         height: '110px',
+        alignItems: 'center',
+        textAlign: 'center',
     },
+
     input: {
-        marginLeft: '100px',
+        marginLeft: '100px',    
         height: '75px',
         border: 'none',
-        borderRadius: '10px',
         paddingLeft: '15px ',
         width: '541.38px',
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
-    emojiButtons: { marginBottom: '9px' },
+    emojiButtons: { marginBottom: '15px' },
     emojiContainer: {
         display: 'flex',
         justifyItems: 'flex-start',
@@ -76,7 +78,7 @@ const Topbar = () => {
             <div className={classes.hamburgerContainer}>
                 <IconButton className={classes.hamburger}>
                     <Hamburger />
-                </IconButton>{' '}
+                </IconButton>
             </div>
             <Grid className={classes.inputContainer}>
                 <input

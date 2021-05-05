@@ -39,14 +39,15 @@ const MainFeed = () => {
     const classes = useStyles();
     return (
         <div className={classes.mainContainer}>
-            <div>
+        
                 <Topbar />
-            </div>
 
             <Box display="flex" flexDirection="row">
                 <div className={classes.sidebar}>
                     <Sidebar />
                 </div>
+
+
                 <Box className={classes.feedContainer}>
                     <FeedCategoriesBtns />
                     <Box display="flex" flexDirection="row">

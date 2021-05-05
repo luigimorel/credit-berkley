@@ -1,8 +1,13 @@
 import React from 'react';
 import { makeStyles, Box } from '@material-ui/core';
+
+
+import Topbar from '../feed-ui/components/topBarComponent';
 import Sidebar from '../feed-ui/components/sidebarComponent';
-import TopBar from '../feed-ui/components/topBarComponent';
-import FeedsCard from "../feed-ui/components/feedsCard";
+import FeedsCard from '../feed-ui/components/feedsCard';
+import Discussions from '../feed-ui/components/discussions';
+import ChartContainer from './components/chartContainer';
+import AccountHealth from './components/accountHealth';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -16,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     sidebar: {
         width: '60px',
     },
-    dashboardContainer: {
+    feedContainer: {
         marginLeft: '100px',
         width: '845px',
         [theme.breakpoints.down('md')]: {
@@ -24,27 +29,35 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '10px',
         },
     },
+
+    descText: {
+        fontSize: '18px',
+        textAlign: 'left',
+        color: '#1A2E35',
+        marginBottom: '20px',
+    },
 }));
-const Dashboard = () => {
+const MainFeed = () => {
     const classes = useStyles();
 
     return (
         <div className={classes.mainContainer}>
-            <div>
-                <TopBar />
-            </div>
+            <Topbar />
+
             <Box display="flex" flexDirection="row">
                 <div className={classes.sidebar}>
                     <Sidebar />
                 </div>
-            </Box>
-            <Box className={classes.dashboardContainer}>
-             
-                    
-                        <FeedsCard />
+
+                <Box className={classes.feedContainer}>
+                    <Box display="flex" flexDirection="column">
+                        <ChartContainer />
+                        <AccountHealth    />
+                    </Box>
+                </Box>
             </Box>
         </div>
     );
 };
 
-export default Dashboard;
+export default MainFeed;
