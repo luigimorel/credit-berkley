@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
     boxContainer: {
         width: '537px',
-       margin: "100px 30px",
+        margin: '100px 30px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
         textAlign: 'center',
@@ -31,14 +31,14 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             height: 'auto',
             width: '340px',
-            margin: "50px 15px"
+            margin: '50px 15px',
         },
     },
-
+    
     logoContainer: {
-        margin: '0 100px 0 100px',
+        margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
-            margin: '2rem auto 0 auto',
+            margin: '25px 0',
         },
     },
 
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '20px',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-            margin: "25px 0",
+            margin: '25px 0',
         },
     },
 

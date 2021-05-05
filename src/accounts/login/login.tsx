@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) =>
         },
 
         logoContainer: {
-            margin: '0 100px 0 100px',
+            margin: '50px 0',
             [theme.breakpoints.down('sm')]: {
-                margin: '2rem auto 0 auto',
+                margin: '25px 0',
             },
         },
 

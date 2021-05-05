@@ -18,15 +18,16 @@ const useStyles = makeStyles((theme) => ({
     container: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         display: 'flex',
+        minHeight: '100%',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         flexDirection: 'row',
     },
 
     boxContainer: {
         width: '537px',
         height: '611px',
-        margin: '100px 0',
+        margin: '100px 30px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
         textAlign: 'center',
@@ -34,26 +35,25 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             height: 'auto',
             width: '350px',
+            margin: '50px 15px',
         },
     },
 
     logoContainer: {
-        marginLeft: '200px',
+        margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
-            marginLeft: 0,
-            marginTop: '40px',
-            marginBottom: '1rem',
+            margin: '25px 0',
         },
     },
+
     header: {
         textTransform: 'uppercase',
         color: '#29A475',
-        marginTop: '100px',
-        marginBottom: '30px',
+        margin: '50px 15px',
         fontSize: '20px',
         fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-            margin: 0,
+            margin: '25px 0',
         },
     },
     infoText: {

@@ -24,25 +24,23 @@ const useStyles = makeStyles((theme) => ({
     boxContainer: {
         width: '537px',
         height: '611px',
-       margin: "100px 30px",
+        margin: '100px 30px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: '1',
         textAlign: 'center',
         paddingBottom: '80px',
         [theme.breakpoints.down('sm')]: {
             height: 'auto',
-            margin: "50px 15px",
+            margin: '50px 15px',
             width: '340px',
         },
     },
-
     logoContainer: {
-        margin: '0 100px 0 100px',
+        margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
-            margin: '2rem auto 0 auto',
+            margin: '25px 0',
         },
     },
-
     header: {
         textTransform: 'uppercase',
         color: '#29A475',
