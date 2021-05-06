@@ -4,10 +4,9 @@ import { makeStyles, Box } from '@material-ui/core';
 
 import Topbar from '../feed-ui/components/topBarComponent';
 import Sidebar from '../feed-ui/components/sidebarComponent';
-import FeedsCard from '../feed-ui/components/feedsCard';
-import Discussions from '../feed-ui/components/discussions';
 import ChartContainer from './components/chartContainer';
 import AccountHealth from './components/accountHealth';
+import Accounts from './components/accounts';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -49,12 +48,18 @@ const MainFeed = () => {
                     <Sidebar />
                 </div>
 
-                <Box className={classes.feedContainer}>
-                    <Box display="flex" flexDirection="column">
-                        <ChartContainer />
-                        <AccountHealth    />
+                <Box
+                    className={classes.feedContainer}
+                    display="flex"
+                    flexDirection="column"
+                >
+                        <Box>
+                            <ChartContainer />
+                        </Box>
+                        <Box>
+                            <AccountHealth />
+                        </Box>
                     </Box>
-                </Box>
             </Box>
         </div>
     );
