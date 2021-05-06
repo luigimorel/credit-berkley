@@ -6,15 +6,18 @@ const useStyles = makeStyles((theme) => ({
     sidebarContainer: {
         alignItems: 'center',
     },
+
     iconButton: {
         width: '42px',
         height: '42px',
         marginTop: '51px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
+
     btnContainer: {
         marginTop: '25.5px',
     },
+    
 }));
 const Sidebar = () => {
     const classes = useStyles();
@@ -27,6 +30,8 @@ const Sidebar = () => {
             p={1}
             m={1}
         >
+
+            {/* TO DO : Remove the duplicate by looping through this */}
             <div className={classes.btnContainer}>
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
@@ -60,12 +65,11 @@ const Sidebar = () => {
                         width: '80px',
                         marginTop: '100px',
                         color: '#1D9F6EA2',
-                        background: '#ECF3FD 0% 0% no-repeat padding-box',
                         boxShadow:
                             '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
                     }}
                 >
-                    Join{' '}
+                    Join
                 </Button>
             </div>
         </Box>

@@ -1,11 +1,17 @@
 import React from 'react';
 import { makeStyles, Box, Typography } from '@material-ui/core';
 
-import Illustration from '../../../assets/imgIllustration.jpg';
+import Credit from '../../../assets/expenses/credit.jpg';
+import Accounts from '../../../assets/expenses/accounts.jpg';
+import Tax from '../../../assets/expenses/tax.jpg';
+import Auto from '../../../assets/expenses/auto.jpg';
+import Housing from '../../../assets/expenses/housing.jpg';
+import Savings from '../../../assets/expenses/savings.jpg';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        marginTop: '35px',
+        marginTop: '2rem',
+        marginBottom: "5rem",
         height: '445px',
         width: '852px',
         alignItems: 'center',
@@ -61,37 +67,37 @@ const accounts: Array<any> = [
     {
         id: 1,
         name: 'Credit',
-        image: Illustration,
+        image: Credit,
         descText: 'Last checked: Feb 29, 2020',
     },
     {
         id: 2,
         name: 'Accounts',
-        image: Illustration,
+        image: Accounts,
         descText: '4 active accounts',
     },
     {
         id: 3,
         name: 'Tax',
-        image: Illustration,
+        image: Tax,
         descText: 'Start my taxes now',
     },
     {
         id: 4,
         name: 'Auto',
-        image: Illustration,
+        image: Auto,
         descText: 'Link you cars and drivers',
     },
     {
         id: 5,
         name: 'Housing ',
-        image: Illustration,
+        image: Housing,
         descText: 'Discover your buying power',
     },
     {
         id: 6,
         name: 'Savings',
-        image: Illustration,
+        image: Savings,
         descText: 'Savings',
     },
 ];
@@ -129,7 +135,7 @@ const Expenses = () => {
                         </div>
 
                         <img
-                            src={Illustration}
+                            src={Credit}
                             className={classes.illustration}
                             alt=""
                         />
@@ -151,7 +157,7 @@ const Expenses = () => {
                         </div>
 
                         <img
-                            src={Illustration}
+                            src={Accounts}
                             className={classes.illustration}
                             alt=""
                         />
@@ -173,7 +179,7 @@ const Expenses = () => {
                         </div>
 
                         <img
-                            src={Illustration}
+                            src={Tax}
                             className={classes.illustration}
                             alt=""
                         />
@@ -200,7 +206,7 @@ const Expenses = () => {
                             </Typography>
                         </div>
                         <img
-                            src={Illustration}
+                            src={Auto}
                             className={classes.illustration}
                             alt=""
                         />
@@ -221,7 +227,7 @@ const Expenses = () => {
                             </Typography>
                         </div>
                         <img
-                            src={Illustration}
+                            src={Housing}
                             className={classes.illustration}
                             alt=""
                         />
@@ -242,7 +248,7 @@ const Expenses = () => {
                             </Typography>
                         </div>
                         <img
-                            src={Illustration}
+                            src={Savings}
                             className={classes.illustration}
                             alt=""
                         />

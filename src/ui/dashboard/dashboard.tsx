@@ -7,12 +7,14 @@ import Sidebar from '../feed-ui/components/sidebarComponent';
 import ChartContainer from './components/chartContainer';
 import AccountHealth from './components/accountHealth';
 import Expenses from './components/expenses';
+import CreditCardUsage from './components/creditCardUsage';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         minHeight: '100%',
         paddingLeft: '80px',
+        paddingBottom: '10rem',
         [theme.breakpoints.down('lg')]: {
             paddingLeft: '60px',
         },
@@ -37,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
         marginBottom: '20px',
     },
-    
 }));
 const MainFeed = () => {
     const classes = useStyles();
@@ -59,12 +60,19 @@ const MainFeed = () => {
                     <Box>
                         <ChartContainer />
                     </Box>
-                    <Box mb={10}>
+
+                    <Box >
                         <Expenses />
                     </Box>
+
                     <Box>
                         <AccountHealth />
                     </Box>
+
+                    <Box mt={10}>
+                        <CreditCardUsage />
+                    </Box>
+
                 </Box>
             </Box>
         </div>
