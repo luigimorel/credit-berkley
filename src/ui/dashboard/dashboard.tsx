@@ -6,7 +6,7 @@ import Topbar from '../feed-ui/components/topBarComponent';
 import Sidebar from '../feed-ui/components/sidebarComponent';
 import ChartContainer from './components/chartContainer';
 import AccountHealth from './components/accountHealth';
-import Accounts from './components/accounts';
+import Expenses from './components/expenses';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -17,9 +17,11 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: '60px',
         },
     },
+
     sidebar: {
         width: '60px',
     },
+
     feedContainer: {
         marginLeft: '100px',
         width: '845px',
@@ -35,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
         marginBottom: '20px',
     },
+    
 }));
 const MainFeed = () => {
     const classes = useStyles();
@@ -53,13 +56,16 @@ const MainFeed = () => {
                     display="flex"
                     flexDirection="column"
                 >
-                        <Box>
-                            <ChartContainer />
-                        </Box>
-                        <Box>
-                            <AccountHealth />
-                        </Box>
+                    <Box>
+                        <ChartContainer />
                     </Box>
+                    <Box mb={10}>
+                        <Expenses />
+                    </Box>
+                    <Box>
+                        <AccountHealth />
+                    </Box>
+                </Box>
             </Box>
         </div>
     );
