@@ -15,14 +15,7 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '100%',
         paddingTop: '62.25px',
     },
-    hamburgerContainer: {
-        height: '57px',
-        width: '57px',
-    },
-    hamburger: {
-        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-        borderRadius: '50%',
-    },
+   
     inputContainer: {
         width: '852px',
         borderRadius: '10px',
@@ -75,11 +68,7 @@ const Topbar = () => {
             p={1}
             className={classes.mainContainer}
         >
-            <div className={classes.hamburgerContainer}>
-                <IconButton className={classes.hamburger}>
-                    <Hamburger />
-                </IconButton>
-            </div>
+          
             <Grid className={classes.inputContainer}>
                 <input
                     color="inherit"
@@ -90,13 +79,17 @@ const Topbar = () => {
                 <Box p={1} m={1} display="flex" flexDirection="row">
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
+
                     </IconButton>
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
+
                     </IconButton>
+
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
                     </IconButton>
+
                 </Box>
             </Grid>
 

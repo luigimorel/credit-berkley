@@ -25,4 +25,5 @@ Since some interfaces are ca not be accessed via clicks, here are the routes tha
 /find-account
 /feed
 /dashboard
+/messenger
 ```
