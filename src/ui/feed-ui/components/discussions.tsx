@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
     mainContainer: {
         marginLeft: '91px',
     },
+    
     heading: {
         color: '#1D9F6E',
         fontSize: '24px',
@@ -13,18 +14,21 @@ const useStyles = makeStyles(() => ({
         textAlign: 'center',
         whiteSpace: 'nowrap',
     },
+
     container: {
         textAlign: 'center',
         display: 'flex',
         justifyContent: 'space-around',
         flexDirection: 'row',
     },
+
     viewAll: {
         color: '#1D9F6E',
         marginLeft: '41px',
         whiteSpace: 'nowrap',
         marginTop: '2px',
     },
+
     icon: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -34,17 +38,21 @@ const useStyles = makeStyles(() => ({
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '50%',
     },
+
     questionPara: {
         fontWeight: 600,
         paddingBottom: '25px',
     },
+
     questionContainer: {
         marginLeft: '1rem',
     },
+
     question: {
         paddingBottom: '1.5rem',
         marginTop: '1.5rem',
     },
+    
 }));
 
 const Discussions = () => {

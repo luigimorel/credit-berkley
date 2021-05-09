@@ -14,8 +14,10 @@ const MessengerChat = () => {
 
     return (
         <div className={classes.mainContainer}>
-Hello from the chat component of the messenger        </div>
+            Hello from the chat component of the messenger
+        </div>
     )
+
 }
 
 export default MessengerChat

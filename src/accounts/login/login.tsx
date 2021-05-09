@@ -122,11 +122,11 @@ const useStyles = makeStyles((theme) =>
         },
     }),
 );
-export default function UserLogin  () {
+export default function UserLogin() {
     const classes = useStyles();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [disable, setDisable] = useState('')
+    const [disable, setDisable] = useState('');
 
     const formik = useFormik({
         initialValues: {
@@ -145,7 +145,7 @@ export default function UserLogin  () {
 
     const handleLogIn = async (event: React.FormEvent) => {
         event.preventDefault();
-    }
+    };
 
     return (
         <div className={classes.mainContainer}>
@@ -186,12 +186,9 @@ export default function UserLogin  () {
                             }
                         />
 
-                        <Button fullWidth
-                            className={classes.btnLogin}
-                        >
-                          
-                               
-                                 Log In
+                        <Button fullWidth className={classes.btnLogin}>
+                            
+                            Log In
                         </Button>
                     </form>
                     <Typography
@@ -218,5 +215,4 @@ export default function UserLogin  () {
             </Grid>
         </div>
     );
-};
-
+}
