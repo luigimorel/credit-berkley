@@ -1,11 +1,10 @@
 import React from 'react';
-import { makeStyles, Box } from '@material-ui/core';
+import { makeStyles, Grid, Box } from '@material-ui/core';
 
 import Sidebar from '../feed-ui/components/sidebarComponent';
 import MessengerTopBar from './components/messengerTopBar';
 import MessengerSideBar from './components/messengerSideBar';
 import MessengerChat from './components/messengerChat';
-
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -18,10 +17,14 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '50px',
         alignContent: 'center',
     },
-    messengerSideBarContainer: {
-        width: "512px",
-        
-}
+    messengerArea: {
+        display: 'flex',
+        marginTop: '200px',
+        flexDirection: 'row',
+    },
+    chatContainer: {
+        boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
 }));
 
 const Messenger = () => {
@@ -32,15 +35,19 @@ const Messenger = () => {
             className={classes.mainContainer}
             display="flex"
             flexDirection="row"
+            justifyContent="space-between"
         >
-            <div className={classes.sidebar}>
-                <Sidebar />
-            </div>
+            <Sidebar />
+
             <MessengerTopBar />
-            <Box display="flex" justifyContent="column">
-                <MessengerSideBar />
-                <MessengerChat />
-            </Box>
+            <Grid md={12} lg={12} className={classes.messengerArea}>
+                <div>
+                    <MessengerSideBar />
+                </div>
+                <div className={classes.chatContainer}>
+                    <MessengerChat />
+                </div>
+            </Grid>
         </Box>
     );
 };
