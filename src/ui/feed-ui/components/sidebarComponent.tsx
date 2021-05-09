@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, IconButton, makeStyles } from '@material-ui/core';
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
+import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
 
 const useStyles = makeStyles((theme) => ({
     sidebarContainer: {
@@ -17,8 +18,16 @@ const useStyles = makeStyles((theme) => ({
     btnContainer: {
         marginTop: '25.5px',
     },
-    
-}));
+    hamburgerContainer: {
+        height: '57px',
+        width: '57px',
+    },
+    hamburger: {
+        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        borderRadius: '50%',
+    }
+    }
+));
 const Sidebar = () => {
     const classes = useStyles();
 
@@ -27,11 +36,14 @@ const Sidebar = () => {
             display="flex"
             flexDirection="column"
             className={classes.sidebarContainer}
-            p={1}
-            m={1}
+                
         >
-
             {/* TO DO : Remove the duplicate by looping through this */}
+            <div className={classes.hamburgerContainer}>
+                <IconButton className={classes.hamburger}>
+                    <Hamburger />
+                </IconButton>
+            </div>
             <div className={classes.btnContainer}>
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
