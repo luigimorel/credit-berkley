@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { makeStyles, Box, Typography, InputBase } from '@material-ui/core';
-import { ReactComponent as BankIcon } from '../../../assets/feedIcons/Bank-icon.svg';
+import {
+    makeStyles,
+    Box,
+    Typography,
+    InputBase,
+    Divider,
+} from '@material-ui/core';
 
 import placeholderImage from '../../../assets/person.jpg';
 
-
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        marginTop: '200px',
         width: '512px',
     },
 
@@ -21,21 +24,28 @@ const useStyles = makeStyles((theme) => ({
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
 
-    message: {
+    messages: {
         paddingBottom: '1.5rem',
         marginTop: '1.5rem',
     },
 
     messageContainer: {
         marginLeft: '3rem',
+        marginBottom: '2rem',
+        margin: '20px',
+        marginTop: '1rem',
+        '&::hover': {
+            boxShadow:
+                'ins    et 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        },
     },
 
     profileImage: {
         alignItems: 'center',
         justifyContent: 'center',
-        height: "70px",
-        width:"auto",
-        padding: '2rem',
+        height: '70px',
+        width: 'auto',
+        padding: '1rem',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
@@ -45,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     content: {
         fontWeight: 600,
         paddingBottom: '25px',
+    },
+    textContainer: {
+        marginLeft: '3rem',
     },
 }));
 const MessengerSideBar = () => {
@@ -66,56 +79,84 @@ const MessengerSideBar = () => {
             <Box
                 display="flex"
                 flexDirection="column "
-                className={classes.message}
+                className={classes.messages}
             >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
+                {/* TO DO: Change this to a list item (I think this would be he most suitable) */}
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    className={classes.messageContainer}
+                >
+                    <Box>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box className={classes.textContainer}>
+                        <Typography component="p" className={classes.content}>
+                            Why do you have to go to Indonesia ?
+                        </Typography>
+                        <Typography component="p">
+                            by :{' '}
+                            <span style={{ color: '#1D9F6E' }}>
+                                Wildan Wari
+                            </span>
+                        </Typography>
+                    </Box>
                 </Box>
-                <Box className={classes.messageContainer}>
-                    <Typography component="p" className={classes.content}>
-                        Why do you have to go to Indonesia ?
-                    </Typography>
-                    <Typography component="p">
-                        by :{' '}
-                        <span style={{ color: '#1D9F6E' }}>Wildan Wari</span>
-                    </Typography>
-                </Box>{' '}
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
+                <Divider style={{ margin: '0 1rem' }} />{' '}
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    className={classes.messageContainer}
+                >
+                    <Box>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box className={classes.textContainer}>
+                        <Typography component="p" className={classes.content}>
+                            Why do you have to go to Indonesia ?
+                        </Typography>
+                        <Typography component="p">
+                            by :{' '}
+                            <span style={{ color: '#1D9F6E' }}>
+                                Wildan Wari
+                            </span>
+                        </Typography>
+                    </Box>
                 </Box>
-                <Box className={classes.messageContainer}>
-                    <Typography component="p" className={classes.content}>
-                        Why do you have to go to Indonesia ?
-                    </Typography>
-                    <Typography component="p">
-                        by :{' '}
-                        <span style={{ color: '#1D9F6E' }}>Wildan Wari</span>
-                    </Typography>
-                </Box>{' '}
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
+                <Divider style={{ margin: '0 1rem' }} />{' '}
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    className={classes.messageContainer}
+                >
+                    <Box>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box className={classes.textContainer}>
+                        <Typography component="p" className={classes.content}>
+                            Why do you have to go to Indonesia ?
+                        </Typography>
+                        <Typography component="p">
+                            by :{' '}
+                            <span style={{ color: '#1D9F6E' }}>
+                                Wildan Wari
+                            </span>
+                        </Typography>
+                    </Box>
                 </Box>
-                <Box className={classes.messageContainer}>
-                    <Typography component="p" className={classes.content}>
-                        Why do you have to go to Indonesia ?
-                    </Typography>
-                    <Typography component="p">
-                        by :{' '}
-                        <span style={{ color: '#1D9F6E' }}>Wildan Wari</span>
-                    </Typography>
-                </Box>
+                <Divider style={{ margin: '0 1rem' }} />
             </Box>
         </div>
     );
