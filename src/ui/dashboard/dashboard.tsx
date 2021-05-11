@@ -39,6 +39,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
         marginBottom: '20px',
     },
+    accountHealthContainer: {
+        height: '445px',
+        boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
 }));
 const MainFeed = () => {
     const classes = useStyles();
@@ -65,7 +69,7 @@ const MainFeed = () => {
                         <Expenses />
                     </Box>
 
-                    <Box>
+                    <Box className={classes.accountHealthContainer}>
                         <AccountHealth />
                     </Box>
 

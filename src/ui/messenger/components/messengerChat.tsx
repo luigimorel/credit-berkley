@@ -4,7 +4,7 @@ import {
     Box,
     Typography,
     TextField,
-    InputBase,
+    Divider,
 } from '@material-ui/core';
 import { ReactComponent as Ellipsis } from '../../../assets/feedIcons/Ellipsis.svg';
 import placeholderImage from '../../../assets/person.jpg';
@@ -38,7 +38,8 @@ const useStyles = makeStyles((theme) => ({
         height: '70px',
         width: 'auto',
         padding: '1rem',
-        background: '#ECF3FD 0% 0% no-repeat padding-box',
+        background:
+            'transparent radial-gradient(closest-side at 0% 0%, #FFFFFF9D 0%, #92929214 100%) 0% 0% no-repeat padding-box',
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '50%',
@@ -59,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
     pinnedMessage: {
         height: '75px',
+        marginRight: '20px',
         alignItems: 'center',
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -164,10 +166,12 @@ const MessengerChat = () => {
             >
                 <Box>
                     <Typography variant="body1" style={{ color: '#39AB80' }}>
+                        <Divider orientation="vertical" />
                         Pinned Message
                     </Typography>
 
                     <Typography component="p">
+                        <Divider orientation="vertical" />
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry
                     </Typography>
