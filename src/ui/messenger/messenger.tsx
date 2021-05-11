@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     chatContainer: {
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        marginLeft: '100px',
     },
 }));
 

@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '1rem',
         '&::hover': {
             boxShadow:
-                'ins    et 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+                'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         },
     },
 
