@@ -12,7 +12,6 @@ import CreditCardUsage from './components/creditCardUsage';
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
-        minHeight: '100%',
         paddingLeft: '80px',
         paddingBottom: '10rem',
         [theme.breakpoints.down('lg')]: {
@@ -41,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
     },
     accountHealthContainer: {
         height: '445px',
+        boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
+    creditCardUsage: {
+        height: '576px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
 }));
@@ -73,7 +76,7 @@ const MainFeed = () => {
                         <AccountHealth />
                     </Box>
 
-                    <Box mt={10}>
+                    <Box mt={10} className={classes.creditCardUsage}>
                         <CreditCardUsage />
                     </Box>
 
