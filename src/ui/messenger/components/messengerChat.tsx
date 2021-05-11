@@ -3,6 +3,8 @@ import {
     makeStyles,
     Box,
     Typography,
+    TextField,
+    InputBase,
 } from '@material-ui/core';
 import { ReactComponent as Ellipsis } from '../../../assets/feedIcons/Ellipsis.svg';
 import placeholderImage from '../../../assets/person.jpg';
@@ -57,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 
     pinnedMessage: {
         height: '75px',
-
+        alignItems: 'center',
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
@@ -66,6 +68,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '110px',
         // marginBottom: '100px',
     },
+
     messageContainer: {
         marginLeft: '3rem',
         marginBottom: '2rem',
@@ -76,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
                 'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         },
     },
+
     profileImage: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -86,9 +90,18 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '50%',
     },
+
     content: {
         fontWeight: 600,
         paddingBottom: '25px',
+    },
+
+    messageInput: {
+        height: '75px',
+        alignItems: 'center',
+        justifyContent: 'center',
+        boxShadow:
+            'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
 }));
 const MessengerChat = () => {
@@ -165,10 +178,23 @@ const MessengerChat = () => {
                 </Box>
             </Box>
 
+            <Messages />
 
-          <Messages/>
-          
-          
+            <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-around"
+                className={classes.messageInput}
+            >
+                <FaThumbtack style={{ margin: '0 20px' }} />
+                <TextField
+                    style={{ width: '690px' }}
+                    placeholder="Ask a Question or Post a Comment"
+                    InputProps={{ disableUnderline: true }}
+                />
+                <FaThumbtack style={{ margin: '0 20px' }} />
+                <FaThumbtack style={{ margin: '0 20px' }} />
+            </Box>
         </div>
     );
 };

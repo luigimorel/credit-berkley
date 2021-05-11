@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
                 'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         },
     },
+
     profileImage: {
         alignItems: 'center',
         justifyContent: 'center',
@@ -32,13 +33,16 @@ const useStyles = makeStyles((theme) => ({
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '50%',
     },
+
     textContainer: {
         marginLeft: '3rem',
     },
+
     messageContent: {
         fontWeight: 600,
         paddingBottom: '25px',
     },
+
     message: {
         fontWeight: 600,
         paddingBottom: '25px',
@@ -130,7 +134,7 @@ const Messages = () => {
                         justifyContent="space-around"
                     >
                         <Typography component="p">
-                            <span style={{ color: '#1D9F6E' , float: "right"}}>
+                            <span style={{ color: '#1D9F6E' }}>
                                 Wildan Wari
                             </span>
                         </Typography>{' '}
