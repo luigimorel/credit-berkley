@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
         height: '70px',
         width: 'auto',
         padding: '1rem',
-        background: '#ECF3FD 0% 0% no-repeat padding-box',
+        background:
+            'transparent radial-gradient(closest-side at 0% 0%, #FFFFFF9D 0%, #92929214 100%) 0% 0% no-repeat padding-box',
         boxShadow:
             'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '50%',
@@ -71,7 +72,7 @@ const Messages = () => {
                     <Box
                         display="flex"
                         flexDirection="column"
-                        justifyContent="space-between"
+                        justifyContent="space-around"
                     >
                         <Typography component="p">
                             <span style={{ color: '#1D9F6E' }}>
@@ -115,6 +116,8 @@ const Messages = () => {
                 </Box>
             </Box>
             <Divider style={{ margin: '0 30px' }} />
+
+
             <Box
                 display="flex"
                 flexDirection="row"
@@ -127,11 +130,12 @@ const Messages = () => {
                         className={classes.profileImage}
                     />
                 </Box>
+
                 <Box className={classes.textContainer}>
                     <Box
                         display="flex"
                         flexDirection="row"
-                        justifyContent="space-around"
+                        justifyContent="space-between"
                     >
                         <Typography component="p">
                             <span style={{ color: '#1D9F6E' }}>
@@ -148,6 +152,8 @@ const Messages = () => {
                         Why do you have to go to Indonesia ?
                     </Typography>
                 </Box>
+
+
             </Box>
             <Divider style={{ margin: '0 30px' }} />
         </div>
