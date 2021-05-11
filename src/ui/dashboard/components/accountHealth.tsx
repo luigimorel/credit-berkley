@@ -1,9 +1,9 @@
 import React from 'react';
-import { makeStyles, Box, Typography } from '@material-ui/core';
+import { makeStyles, Box, Typography, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        marginTop: '40px',
+        marginTop: '48px',
         marginLeft: '40px',
         marginRight: '100px',
     },
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '1rem',
         backgroundColor: '#0BBC79',
     },
-    accountType: {},
+    accountType: { color: '#9E9E9E' },
     accountBalance: {
         fontSize: '14px',
     },
@@ -43,11 +43,9 @@ const AccountHealth = () => {
             <Typography component="p" className={classes.heading}>
                 ACCOUNTS
             </Typography>
-
             <Typography component="p" className={classes.mainHeading}>
                 How your accounts look today?
             </Typography>
-
             <Box
                 className={classes.balanceContainer}
                 display="flex"
@@ -62,24 +60,127 @@ const AccountHealth = () => {
                 </Typography>
             </Box>
             <div className={classes.accountBar}></div>
-
             <Box
                 className={classes.balanceContainer}
                 display="flex"
                 flexDirection="row"
                 justifyContent="space-between"
             >
-                <Typography
-                    component="p"
-                    style={{ fontSize: '10px' }}
-                    className={classes.accountType}
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                    alignContent="center"
                 >
-                    Credit Cards{' '}
+                    <div
+                        style={{
+                            backgroundColor: '#1D9F6E',
+                            width: '12px',
+                            height: '7px',
+                            margin: '10px',
+                            borderRadius: '10px',
+                        }}
+                    ></div>
+
+                    <Typography
+                        component="p"
+                        style={{ fontSize: '10px' }}
+                        className={classes.accountType}
+                    >
+                        Credit Cards{' '}
+                    </Typography>
+                </Box>
+                <Typography component="p" className={classes.accountBalance}>
+                    $145,000
                 </Typography>
+            </Box>{' '}
+            <Box
+                className={classes.balanceContainer}
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+            >
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                    alignContent="center"
+                >
+                    <div
+                        style={{
+                            backgroundColor: '#0BBC79',
+                            width: '12px',
+                            height: '7px',
+                            margin: '10px',
+                            borderRadius: '10px',
+                        }}
+                    ></div>
+
+                    <Typography
+                        component="p"
+                        style={{ fontSize: '10px' }}
+                        className={classes.accountType}
+                    >
+                        Collections
+                    </Typography>
+                </Box>
+                <Typography component="p" className={classes.accountBalance}>
+                    $145,000
+                </Typography>
+            </Box>{' '}
+            <Box
+                className={classes.balanceContainer}
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+            >
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-around"
+                    alignItems="center"
+                    alignContent="center"
+                >
+                    <div
+                        style={{
+                            backgroundColor: '#1D9F6E',
+                            width: '12px',
+                            height: '7px',
+                            margin: '10px',
+                            borderRadius: '10px',
+                        }}
+                    ></div>
+
+                    <Typography
+                        component="p"
+                        style={{ fontSize: '10px' }}
+                        className={classes.accountType}
+                    >
+                        Credit Cards{' '}
+                    </Typography>
+                </Box>
                 <Typography component="p" className={classes.accountBalance}>
                     $145,000
                 </Typography>
             </Box>
+            <Box display="flex" alignItems="center" justifyContent="center">
+                <Button
+                    style={{
+                        margin: '0 auto',
+                        position: 'absolute',
+                        height: '3rem',
+                        color: '#1D9F6E',
+                        border: '1px solid #1D9F6E',
+                        width: '180px',
+                        marginTop: '160px',
+                        fontWeight: 'bold',
+                    }}
+                >
+                    VIEW MY ACCOUNTS
+                </Button>
+            </Box>{' '}
         </div>
     );
 };
