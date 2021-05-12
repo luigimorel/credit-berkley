@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Box, Typography } from '@material-ui/core';
+import { makeStyles, Box, Button, Typography } from '@material-ui/core';
 // import Accounts from './accounts';
 import Illustration from '../../../assets/imgIllustration.jpg';
 
@@ -54,11 +54,27 @@ const ChartContainer = () => {
         <div className={classes.mainContainer}>
             <Box className={classes.chartsContainer}>
                 <Box display="flex" flexDirection="row" alignContent="center">
-                    <Box className={classes.chart}>Hello</Box>
+                    <Box className={classes.chart}>This is the are for the circular chart area</Box>
                     <Box className={classes.chart}>Hello</Box>
                 </Box>
             </Box>
-        
+            <Box display="flex" alignItems="center" justifyContent="center">
+                <Button
+                    style={{
+                        margin: '0 auto',
+                        position: 'absolute',
+                        height: '3rem',
+                        color: '#1D9F6E',
+                        border: '1px solid #1D9F6E',
+                        width: '180px',
+                        marginTop: '300px',
+                        fontWeight: 'bold',
+                        fontSize: '10px',
+                    }}
+                >
+                    VIEW REPORT CHANGES
+                </Button>
+            </Box>{' '}
         </div>
     );
 };
