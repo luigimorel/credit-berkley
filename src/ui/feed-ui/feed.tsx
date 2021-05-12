@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 const MainFeed = () => {
     const classes = useStyles();
     return (
+        
         <div className={classes.mainContainer}>
         
                 <Topbar />

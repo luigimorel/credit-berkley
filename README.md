@@ -26,4 +26,5 @@ Since some interfaces are ca not be accessed via clicks, here are the routes tha
 /feed
 /dashboard
 /messenger
+/secondary-feed
 ```
