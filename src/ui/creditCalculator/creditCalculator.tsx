@@ -1,12 +1,14 @@
 import React from 'react';
 import { makeStyles, Box } from '@material-ui/core';
 
-import Topbar from '../feed-ui/components/topBarComponent';
+import AccountHealth from '../dashboard/components/accountHealth';
+import ChartContainer from '../dashboard/components/chartContainer';
+import CreditCardUsage from '../dashboard/components/creditCardUsage';
+import Expenses from '../dashboard/components/expenses';
 import Sidebar from '../feed-ui/components/sidebarComponent';
-import ChartContainer from './components/chartContainer';
-import AccountHealth from './components/accountHealth';
-import Expenses from './components/expenses';
-import CreditCardUsage from './components/creditCardUsage';
+import Topbar from '../feed-ui/components/topBarComponent';
+import CreditReportChanges from './components/creditReportChanges';
+import Calculator from './components/calculator';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -17,11 +19,9 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: '60px',
         },
     },
-
     sidebar: {
         width: '60px',
     },
-
     feedContainer: {
         marginLeft: '100px',
         width: '845px',
@@ -29,13 +29,6 @@ const useStyles = makeStyles((theme) => ({
             width: '200px',
             marginLeft: '10px',
         },
-    },
-
-    descText: {
-        fontSize: '18px',
-        textAlign: 'left',
-        color: '#1A2E35',
-        marginBottom: '20px',
     },
     accountHealthContainer: {
         height: '445px',
@@ -45,8 +38,21 @@ const useStyles = makeStyles((theme) => ({
         height: '576px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
+
+    creditReports: {
+        height: '445px',
+        boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        margin: '1.8rem 0',
+    },
+    calculator: {
+        marginTop: '35px',
+        marginLeft: '5rem',
+        height: '830px',
+        width: '516px',
+        boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
 }));
-const MainFeed = () => {
+const CreditCalculator = () => {
     const classes = useStyles();
 
     return (
@@ -57,16 +63,15 @@ const MainFeed = () => {
                 <div className={classes.sidebar}>
                     <Sidebar />
                 </div>
-
                 <Box
                     className={classes.feedContainer}
                     display="flex"
                     flexDirection="column"
                 >
-                    
                     <ChartContainer />
-
-                    <Expenses />
+                    <div className={classes.creditReports}>
+                        <CreditReportChanges />
+                    </div>
 
                     <Box className={classes.accountHealthContainer}>
                         <AccountHealth />
@@ -76,10 +81,14 @@ const MainFeed = () => {
                         <CreditCardUsage />
                     </Box>
 
+                    <Expenses />
+                </Box>
+                <Box className={classes.calculator}>
+                    <Calculator />
                 </Box>
             </Box>
         </div>
     );
 };
 
-export default MainFeed;
+export default CreditCalculator;
