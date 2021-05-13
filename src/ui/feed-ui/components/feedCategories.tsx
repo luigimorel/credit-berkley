@@ -13,6 +13,7 @@ const useStyles = makeStyles({
         fontSize: '13px',
         textTransform: 'capitalize',
         '&:hover': {
+            borderRadius: '10px',
             boxShadow:
                 '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
             background: '#ffffff 0% 0% no-repeat padding-box',
