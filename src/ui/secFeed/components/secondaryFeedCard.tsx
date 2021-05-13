@@ -11,18 +11,20 @@ const useStyles = makeStyles({
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
+
     cardBtn: {
         width: '135px',
         height: '42px',
         color: '#1D9F6E',
         border: '2px solid #69BEA2',
     },
+
     textContent: {
         margin: '0 31px ',
     },
 });
 
-const FeedsCard = () => {
+const SecondaryFeedCard = () => {
     const classes = useStyles();
     const date = new Date();
 
@@ -81,4 +83,4 @@ const FeedsCard = () => {
     );
 };
 
-export default FeedsCard;
+export default SecondaryFeedCard;

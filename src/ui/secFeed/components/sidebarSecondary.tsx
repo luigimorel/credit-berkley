@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Box,
     Button,
@@ -15,7 +14,7 @@ import logo from '../../../assets/logo-small.jpg';
 const useStyles = makeStyles((theme) => ({
     sidebarContainer: {
         alignItems: 'center',
-        marginTop: '57px',
+        top: 0,
         background: '#ECF3FD 0% 0% no-repeat padding-box',
     },
 
@@ -42,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     hamburgerContainer: {
+        marginTop: '77px',
         height: '57px',
         width: '57px',
     },
@@ -62,7 +62,9 @@ const useStyles = makeStyles((theme) => ({
     postBtn: {
         marginTop: '100px',
         borderRadius: '10px',
-        marginBottom: '300px',
+        marginBottom: '500px',
+        fontWeight: 'bolder',
+        textTransform: 'capitalize',
         backgroundColor: '#1D9F6E',
         color: '#ffffff',
         height: '68px',
@@ -83,7 +85,7 @@ const SidebarSecondary = () => {
                 className={classes.hamburgerContainer}
                 display="flex"
                 flexDirection="row"
-                justifyContent="flex-start "
+                justifyContent="space-around"
             >
                 <IconButton className={classes.hamburger}>
                     <Hamburger />
@@ -91,7 +93,7 @@ const SidebarSecondary = () => {
                 <img
                     src={logo}
                     className={classes.logo}
-                    height="49.3px"
+                    height="43.3px"
                     width="39.73px"
                     alt=""
                 />
@@ -136,7 +138,7 @@ const SidebarSecondary = () => {
                     Option One
                 </Typography>
             </ListItem>
-            <Button className={classes.postBtn}>Join</Button>
+            <Button className={classes.postBtn}>Post Something</Button>
         </Box>
     );
 };

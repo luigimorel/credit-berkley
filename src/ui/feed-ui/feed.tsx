@@ -16,11 +16,12 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: '60px',
         },
     },
+
     sidebar: {
         width: '60px',
     },
+
     feedContainer: {
-        marginLeft: '100px',
         width: '845px',
         [theme.breakpoints.down('md')]: {
             width: '200px',
@@ -38,16 +39,13 @@ const useStyles = makeStyles((theme) => ({
 const MainFeed = () => {
     const classes = useStyles();
     return (
-        
         <div className={classes.mainContainer}>
-        
-                <Topbar />
+            <Topbar />
 
             <Box display="flex" flexDirection="row">
                 <div className={classes.sidebar}>
                     <Sidebar />
                 </div>
-
 
                 <Box className={classes.feedContainer}>
                     <FeedCategoriesBtns />

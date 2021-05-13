@@ -1,22 +1,18 @@
-import React from 'react';
 import { Grid, makeStyles, Box, IconButton } from '@material-ui/core';
 
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
 import avatar from '../../../assets/avatar.jpg';
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         width: '110px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         minHeight: '100%',
-        marginLeft: '31px',
     },
 
     inputContainer: {
         width: '852px',
         borderRadius: '10px',
-        marginLeft: '115px',
         display: 'flex',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         flexDirection: 'row',
@@ -26,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     },
 
     input: {
-        marginLeft: '100px',
         height: '75px',
         border: 'none',
         paddingLeft: '15px ',
@@ -34,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
+
     emojiButtons: { marginBottom: '15px' },
     emojiContainer: {
         display: 'flex',
@@ -42,17 +38,24 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '127px',
         width: '10px',
     },
+
     dropDownContainer: {
         marginLeft: '125px',
         display: 'flex',
         flexDirection: 'row',
     },
+
     dropdownButtons: {
         marginLeft: '61px',
         width: '57px',
         marginTop: '30px',
         height: '57px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
+
+    avatar: {
+        marginLeft: '30px',
+        marginRight: '20px',
     },
 }));
 
@@ -65,8 +68,14 @@ const SecondaryTopbar = () => {
             p={1}
             className={classes.mainContainer}
         >
-            <img src={avatar} height="65px" width="55px" alt="" />
             <Grid className={classes.inputContainer}>
+                <img
+                    src={avatar}
+                    height="65px"
+                    width="55px"
+                    className={classes.avatar}
+                    alt=""
+                />
                 <input
                     color="inherit"
                     className={classes.input}
