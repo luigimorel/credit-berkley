@@ -53,6 +53,7 @@ const useStyles = makeStyles(() => ({
 
     questionPara: {
         fontWeight: 600,
+        width: '320px',
         marginBottom: '25px',
     },
 
@@ -65,6 +66,11 @@ const useStyles = makeStyles(() => ({
         marginRight: '61px',
         marginBottom: '30px',
         marginTop: '38px',
+    },
+
+    imgBox: {
+        display: 'flex',
+        flexDirection: 'row',
     },
 }));
 
@@ -89,11 +95,7 @@ const LatestDiscussions = () => {
                     <img src={discThumbNail} height="120" width="auto" alt="" />{' '}
                 </Box>
                 <Box className={classes.questionContainer}>
-                    <Box
-                        display="flex"
-                        flexDirection="row"
-                        justifyContent="space-between"
-                    >
+                    <Box className={classes.imgBox}>
                         <Typography
                             component="p"
                             className={classes.questionPara}
@@ -102,13 +104,7 @@ const LatestDiscussions = () => {
                             go to Indonesia ?
                         </Typography>
 
-                        {/* <img
-                            src={saveIcon}
-                            width="16px"
-                            style={{ float: 'right' }}
-                            height="20px"
-                            alt=""
-                        /> */}
+                        <img src={saveIcon} width="16px" height="20px" alt="" />
                     </Box>
                     <Typography component="p">
                         by :{' '}
@@ -144,13 +140,13 @@ const LatestDiscussions = () => {
                             go to Indonesia ?
                         </Typography>
 
-                        {/* <img
+                        <img
                             src={saveIcon}
                             width="16px"
                             style={{ float: 'right' }}
                             height="20px"
                             alt=""
-                        /> */}
+                        />
                     </Box>
                     <Typography component="p">
                         by :{' '}
