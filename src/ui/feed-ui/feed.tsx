@@ -1,5 +1,4 @@
 import { makeStyles, Box } from '@material-ui/core';
-import React from 'react';
 
 import Topbar from './components/topBarComponent';
 import Sidebar from './components/sidebarComponent';
@@ -18,15 +17,20 @@ const useStyles = makeStyles((theme) => ({
     },
 
     sidebar: {
-        width: '60px',
+        width: '315px',
     },
 
     feedContainer: {
         width: '845px',
+        marginTop: '80px',
+        marginLeft: '-100px',
         [theme.breakpoints.down('md')]: {
             width: '200px',
-            marginLeft: '10px',
         },
+    },
+
+    topbarContainer: {
+        marginTop: '48px',
     },
 
     descText: {
@@ -35,20 +39,35 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
         marginBottom: '20px',
     },
+    categoryContainer: {
+        marginTop: '70px ',
+    },
 }));
 const MainFeed = () => {
     const classes = useStyles();
     return (
-        <div className={classes.mainContainer}>
-            <Topbar />
-
+        <Box
+            className={classes.mainContainer}
+            display="flex"
+            flexDirection="row"
+        >
+            <Box className={classes.sidebar}>
+                <Sidebar />
+            </Box>
             <Box display="flex" flexDirection="row">
-                <div className={classes.sidebar}>
-                    <Sidebar />
+                <div className={classes.topbarContainer}>
+                    <Topbar />
                 </div>
 
-                <Box className={classes.feedContainer}>
-                    <FeedCategoriesBtns />
+                <Box
+                    display="flex"
+                    flexDirection="column"
+                    className={classes.feedContainer}
+                >
+                    <div className={classes.categoryContainer}>
+                        <FeedCategoriesBtns />
+                    </div>
+
                     <Box display="flex" flexDirection="row">
                         <Box display="flex" flexDirection="column">
                             <FeedsCard />
@@ -58,7 +77,7 @@ const MainFeed = () => {
                     </Box>
                 </Box>
             </Box>
-        </div>
+        </Box>
     );
 };
 

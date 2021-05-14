@@ -2,7 +2,6 @@ import { makeStyles, Box } from '@material-ui/core';
 
 import SidebarSecondary from './components/sidebarSecondary';
 import FeedCategories from '../feed-ui/components/feedCategories';
-import Discussions from '../feed-ui/components/discussions';
 import SecondaryTopbar from './components/secondaryTopbar';
 import SecondaryFeedCard from './components/secondaryFeedCard';
 import LatestDiscussions from './components/latestDiscussions';
@@ -10,7 +9,6 @@ import LatestDiscussions from './components/latestDiscussions';
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
-        minHeight: '100%',
     },
 
     sidebar: {

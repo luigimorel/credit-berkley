@@ -30,7 +30,9 @@ const useStyles = makeStyles(() => ({
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
 
-    emojiButtons: { marginBottom: '15px' },
+    emojiButtons: {
+        marginBottom: '15px',
+    },
     emojiContainer: {
         display: 'flex',
         justifyItems: 'flex-start',

@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    Grid,
-    makeStyles,
-    Box,
-    IconButton,
-} from '@material-ui/core';
+import { Grid, makeStyles, Box, IconButton } from '@material-ui/core';
 import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
 
@@ -13,13 +8,11 @@ const useStyles = makeStyles((theme) => ({
         width: '110px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         minHeight: '100%',
-        paddingTop: '62.25px',
     },
-   
+
     inputContainer: {
         width: '852px',
         borderRadius: '10px',
-        marginLeft: '115px',
         display: 'flex',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         flexDirection: 'row',
@@ -29,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     input: {
-        marginLeft: '100px',    
+        marginLeft: '38px',
         height: '75px',
         border: 'none',
         paddingLeft: '15px ',
@@ -68,7 +61,6 @@ const Topbar = () => {
             p={1}
             className={classes.mainContainer}
         >
-          
             <Grid className={classes.inputContainer}>
                 <input
                     color="inherit"
@@ -79,17 +71,14 @@ const Topbar = () => {
                 <Box p={1} m={1} display="flex" flexDirection="row">
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
-
                     </IconButton>
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
-
                     </IconButton>
 
                     <IconButton className={classes.emojiButtons}>
                         <LightningIcon />
                     </IconButton>
-
                 </Box>
             </Grid>
 
