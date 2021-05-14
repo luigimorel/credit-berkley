@@ -40,15 +40,18 @@ const useStyles = makeStyles((theme) => ({
             borderRight: '8px solid #1D9F6E',
         },
     },
+
     hamburgerContainer: {
         marginTop: '77px',
         height: '57px',
         width: '57px',
     },
+
     hamburger: {
         borderRadius: '50%',
         margin: 0,
     },
+
     iconButtonText: {
         marginLeft: '2rem',
         color: '#6D7D8F',
@@ -56,9 +59,11 @@ const useStyles = makeStyles((theme) => ({
             color: '#1D9F6E',
         },
     },
+
     logo: {
         marginLeft: '59.13px',
     },
+
     postBtn: {
         marginTop: '100px',
         borderRadius: '10px',
