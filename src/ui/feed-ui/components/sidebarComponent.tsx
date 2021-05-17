@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Button, IconButton, makeStyles } from '@material-ui/core';
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
 import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
@@ -25,9 +24,8 @@ const useStyles = makeStyles((theme) => ({
     hamburger: {
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '50%',
-    }
-    }
-));
+    },
+}));
 const Sidebar = () => {
     const classes = useStyles();
 
@@ -36,7 +34,6 @@ const Sidebar = () => {
             display="flex"
             flexDirection="column"
             className={classes.sidebarContainer}
-                
         >
             {/* TO DO : Remove the duplicate by looping through this */}
             <div className={classes.hamburgerContainer}>
@@ -48,7 +45,6 @@ const Sidebar = () => {
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
                 </IconButton>
-<<<<<<< Updated upstream
             </div>
             <div className={classes.btnContainer}>
                 <IconButton className={classes.iconButton}>
@@ -66,47 +62,11 @@ const Sidebar = () => {
                 </IconButton>
             </div>
             <div className={classes.btnContainer}>
-=======
-
-                <Typography component="p" className={classes.iconButtonText}>
-                    Credit Cards
-                </Typography>
-            </ListItem>
-            <ListItem className={classes.btnContainer}>
-                <IconButton className={classes.iconButton}>
-                    <LightningIcon />
-                </IconButton>
-
-                <Typography component="p" className={classes.iconButtonText}>
-                    Credit Cards
-                </Typography>
-            </ListItem>
-            <ListItem className={classes.btnContainer}>
-                <IconButton className={classes.iconButton}>
-                    <LightningIcon />
-                </IconButton>
-
-                <Typography component="p" className={classes.iconButtonText}>
-                    Credit Cards
-                </Typography>
-            </ListItem>
-            <ListItem className={classes.btnContainer}>
-                <IconButton className={classes.iconButton}>
-                    <LightningIcon />
-                </IconButton>
-
-                <Typography component="p" className={classes.iconButtonText}>
-                    Credit Cards
-                </Typography>
-            </ListItem>
-            <ListItem className={classes.btnContainer}>
->>>>>>> Stashed changes
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
                 </IconButton>
             </div>
 
-<<<<<<< Updated upstream
             <div className={classes.btnContainer}>
                 <Button
                     style={{
@@ -121,14 +81,6 @@ const Sidebar = () => {
                     Join
                 </Button>
             </div>
-=======
-                <Typography component="p" className={classes.iconButtonText}>
-                    Credit Cards
-                </Typography>
-            </ListItem>
-
-            <Button className={classes.joinBtn}>Join Credit Berkeley</Button>
->>>>>>> Stashed changes
         </Box>
     );
 };
