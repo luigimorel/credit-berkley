@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
     },
 
     boxContainer: {
@@ -35,20 +35,22 @@ const useStyles = makeStyles((theme) => ({
             width: '340px',
         },
     },
+
     logoContainer: {
         margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
             margin: '25px 0',
         },
     },
+
     header: {
         textTransform: 'uppercase',
         color: '#29A475',
+        margin: '50px 15px',
         fontSize: '20px',
-        marginTop: '100px',
+        fontWeight: 'bold',
         [theme.breakpoints.down('sm')]: {
-            margin: 0,
-            marginTop: '30px',
+            margin: '25px 0',
         },
     },
 
@@ -142,14 +144,6 @@ const useStyles = makeStyles((theme) => ({
             width: '280px',
         },
     },
-
-    mainContainer: {
-        background: '#ECF3FD 0% 0% no-repeat padding-box',
-        top: '0px',
-        [theme.breakpoints.down('xs')]: {
-            margin: '0 auto',
-        },
-    },
 }));
 
 const ResetPassword = () => {
@@ -167,7 +161,8 @@ const ResetPassword = () => {
     const values = otpValue.split('');
 
     return (
-        <div className={classes.mainContainer}>
+        <>
+            {' '}
             <Grid
                 container
                 className={classes.container}
@@ -188,6 +183,7 @@ const ResetPassword = () => {
                             {CODE_LENGTH.map((v, index) => {
                                 return (
                                     <InputBase
+                                        key={index}
                                         className={classes.otpInputField}
                                         inputProps={{ maxLength: 1 }}
                                         type="number"
@@ -228,7 +224,7 @@ const ResetPassword = () => {
                     </Button>
                 </Grid>
             </Grid>
-        </div>
+        </>
     );
 };
 

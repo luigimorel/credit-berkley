@@ -48,6 +48,7 @@ const Sidebar = () => {
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
                 </IconButton>
+<<<<<<< Updated upstream
             </div>
             <div className={classes.btnContainer}>
                 <IconButton className={classes.iconButton}>
@@ -65,11 +66,47 @@ const Sidebar = () => {
                 </IconButton>
             </div>
             <div className={classes.btnContainer}>
+=======
+
+                <Typography component="p" className={classes.iconButtonText}>
+                    Credit Cards
+                </Typography>
+            </ListItem>
+            <ListItem className={classes.btnContainer}>
+                <IconButton className={classes.iconButton}>
+                    <LightningIcon />
+                </IconButton>
+
+                <Typography component="p" className={classes.iconButtonText}>
+                    Credit Cards
+                </Typography>
+            </ListItem>
+            <ListItem className={classes.btnContainer}>
+                <IconButton className={classes.iconButton}>
+                    <LightningIcon />
+                </IconButton>
+
+                <Typography component="p" className={classes.iconButtonText}>
+                    Credit Cards
+                </Typography>
+            </ListItem>
+            <ListItem className={classes.btnContainer}>
+                <IconButton className={classes.iconButton}>
+                    <LightningIcon />
+                </IconButton>
+
+                <Typography component="p" className={classes.iconButtonText}>
+                    Credit Cards
+                </Typography>
+            </ListItem>
+            <ListItem className={classes.btnContainer}>
+>>>>>>> Stashed changes
                 <IconButton className={classes.iconButton}>
                     <LightningIcon />
                 </IconButton>
             </div>
 
+<<<<<<< Updated upstream
             <div className={classes.btnContainer}>
                 <Button
                     style={{
@@ -84,6 +121,14 @@ const Sidebar = () => {
                     Join
                 </Button>
             </div>
+=======
+                <Typography component="p" className={classes.iconButtonText}>
+                    Credit Cards
+                </Typography>
+            </ListItem>
+
+            <Button className={classes.joinBtn}>Join Credit Berkeley</Button>
+>>>>>>> Stashed changes
         </Box>
     );
 };

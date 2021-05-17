@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
             margin: '50px 15px',
         },
     },
-    
+
     logoContainer: {
         margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '1rem',
         height: '69px',
         boxShadow:
-            'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+            'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         marginTop: '15px',
         padding: ' 0 0 0 40px ',
         margin: '.5rem 0 .5rem 5.5rem',

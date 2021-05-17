@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 import {
     Grid,
@@ -6,6 +7,9 @@ import {
     IconButton,
 } from '@material-ui/core';
 import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
+=======
+import { Grid, makeStyles, Box, IconButton } from '@material-ui/core';
+>>>>>>> Stashed changes
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
    
     inputContainer: {
-        width: '852px',
+        width: '918px',
         borderRadius: '10px',
         marginLeft: '115px',
         display: 'flex',

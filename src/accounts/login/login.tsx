@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>
             display: 'flex',
             minHeight: '100%',
             alignItems: 'center',
-            justifyContent: 'space-around',
+            justifyContent: 'space-evenly',
             flexDirection: 'row',
         },
 
@@ -116,6 +116,9 @@ const useStyles = makeStyles((theme) =>
         mainContainer: {
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             top: '0px',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
             [theme.breakpoints.down('xs')]: {
                 margin: '0 auto',
             },
@@ -148,7 +151,7 @@ export default function UserLogin() {
     };
 
     return (
-        <div className={classes.mainContainer}>
+        <>
             <Grid
                 container
                 className={classes.container}
@@ -187,7 +190,6 @@ export default function UserLogin() {
                         />
 
                         <Button fullWidth className={classes.btnLogin}>
-                            
                             Log In
                         </Button>
                     </form>
@@ -213,6 +215,6 @@ export default function UserLogin() {
                     </Button>
                 </Grid>
             </Grid>
-        </div>
+        </>
     );
 }

@@ -1,7 +1,8 @@
 html,
 #root {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background: '#ECF3FD 0% 0% no-repeat padding-box';
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-color: #ecf3fd;
 }
