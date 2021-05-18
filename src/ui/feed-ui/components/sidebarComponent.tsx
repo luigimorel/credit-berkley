@@ -38,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
     hamburger: {
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '50%',
-        right: 0,
     },
 
     joinBtn: {
@@ -121,7 +120,7 @@ const Sidebar = () => {
                 </Typography>
             </ListItem>
 
-            <Button className={classes.joinBtn}>Join Credit Berkeley</Button>
+            <Button className={classes.joinBtn}>Join</Button>
         </Box>
     );
 };

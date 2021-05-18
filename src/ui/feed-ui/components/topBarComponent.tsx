@@ -1,7 +1,6 @@
-import React from 'react';
-import { Grid, makeStyles, Box, IconButton } from '@material-ui/core';
-import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
-import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
+import { makeStyles, Box, useTheme, useMediaQuery } from '@material-ui/core';
+import DropDownenu from './dropDownenu';
+import InputComponent from './input.component';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -9,51 +8,19 @@ const useStyles = makeStyles((theme) => ({
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         minHeight: '100%',
     },
-
-    inputContainer: {
-        width: '852px',
-        borderRadius: '10px',
-        display: 'flex',
-        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-        flexDirection: 'row',
-        height: '110px',
-        alignItems: 'center',
-        textAlign: 'center',
-    },
-
-    input: {
-        marginLeft: '38px',
-        height: '75px',
-        border: 'none',
-        paddingLeft: '15px ',
-        width: '541.38px',
-        boxShadow:
-            'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-    },
-    emojiButtons: { marginBottom: '15px' },
-    emojiContainer: {
-        display: 'flex',
-        justifyItems: 'flex-start',
-        flexDirection: 'row',
-        marginLeft: '127px',
-        width: '10px',
-    },
     dropDownContainer: {
         marginLeft: '125px',
         display: 'flex',
         flexDirection: 'row',
     },
-    dropdownButtons: {
-        marginLeft: '61px',
-        width: '57px',
-        marginTop: '30px',
-        height: '57px',
-        boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-    },
 }));
 
 const Topbar = () => {
     const classes = useStyles();
+
+    const { breakpoints } = useTheme();
+    const isMobile = useMediaQuery(breakpoints.down('sm'));
+
     return (
         <Box
             display="flex"
@@ -61,34 +28,10 @@ const Topbar = () => {
             p={1}
             className={classes.mainContainer}
         >
-            <Grid className={classes.inputContainer}>
-                <input
-                    color="inherit"
-                    className={classes.input}
-                    placeholder="Ask a question or Post a comment"
-                />
-
-                <Box p={1} m={1} display="flex" flexDirection="row">
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon />
-                    </IconButton>
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon />
-                    </IconButton>
-
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon />
-                    </IconButton>
-                </Box>
-            </Grid>
+            <InputComponent />
 
             <Box className={classes.dropDownContainer}>
-                <IconButton className={classes.dropdownButtons}>
-                    <LightningIcon />
-                </IconButton>
-                <IconButton className={classes.dropdownButtons}>
-                    <LightningIcon />
-                </IconButton>
+                <DropDownenu />
             </Box>
         </Box>
     );
