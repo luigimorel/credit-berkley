@@ -1,21 +1,20 @@
-import React from 'react';
 import { Box, Button, IconButton, makeStyles } from '@material-ui/core';
+
 import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
 import InputComponent from './input.component';
 
-const useStyles = makeStyles(({ breakpoints }) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
-        marginTop: '25px',
+        margin: '25px 25px 25px 25px',
     },
 
     hamburgerContainer: {
         height: '57px',
         width: '57px',
-        marginLeft: '25px',
     },
 
     hamburger: {
@@ -28,7 +27,6 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         width: '67px',
         height: '57px',
         borderRadius: '10px',
-        marginRight: '25px',
         fontWeight: 'bolder',
         color: '#1D9F6EA2',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -48,9 +46,6 @@ const MobileMenu = () => {
                 </Box>
                 <Button className={classes.joinBtn}>Join</Button>
             </Box>
-            <Box display="flex" flexDirection="row">
-                <InputComponent />
-            </Box>{' '}
         </>
     );
 };

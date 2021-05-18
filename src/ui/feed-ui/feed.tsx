@@ -5,7 +5,6 @@ import Sidebar from './components/sidebarComponent';
 import FeedCategoriesBtns from './components/feedCategories';
 import FeedsCard from './components/feedsCard';
 import Discussions from './components/discussions';
-import MobileMenu from './components/mobileMenu';
 import MobileFeed from './components/mobileFeed';
 
 const useStyles = makeStyles((theme) => ({
@@ -58,14 +57,7 @@ const MainFeed = () => {
                 <MobileFeed />
             ) : (
                 <Box className={classes.mainContainer}>
-                    <Box
-                        display="flex"
-                        className={
-                            isMobile
-                                ? classes.mobileScreens
-                                : classes.largeScreens
-                        }
-                    >
+                    <Box display="flex" flexDirection="row">
                         <Box className={classes.sidebar}>
                             <Sidebar />
                         </Box>
@@ -93,7 +85,7 @@ const MainFeed = () => {
                                 </Box>
                             </Box>
                         </Box>
-                    </Box>{' '}
+                    </Box>
                 </Box>
             )}
         </>
