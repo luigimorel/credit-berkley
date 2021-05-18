@@ -6,6 +6,10 @@ import Sidebar from './components/sidebarComponent';
 import FeedCategoriesBtns from './components/feedCategories';
 import FeedsCard from './components/feedsCard';
 import Discussions from './components/discussions';
+<<<<<<< Updated upstream
+=======
+import MobileFeed from './components/mobileFeed';
+>>>>>>> Stashed changes
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -39,8 +43,25 @@ const useStyles = makeStyles((theme) => ({
 const MainFeed = () => {
     const classes = useStyles();
     return (
+<<<<<<< Updated upstream
         <div className={classes.mainContainer}>
             <Topbar />
+=======
+        <>
+            {isMobile ? (
+                <MobileFeed />
+            ) : (
+                <Box className={classes.mainContainer}>
+                    <Box display="flex" flexDirection="row">
+                        <Box className={classes.sidebar}>
+                            <Sidebar />
+                        </Box>
+
+                        <Box display="flex" flexDirection="row">
+                            <div className={classes.topbarContainer}>
+                                <Topbar />
+                            </div>
+>>>>>>> Stashed changes
 
             <Box display="flex" flexDirection="row">
                 <div className={classes.sidebar}>
@@ -54,7 +75,10 @@ const MainFeed = () => {
                             <FeedsCard />
                             <FeedsCard />
                         </Box>
+<<<<<<< Updated upstream
                         <Discussions />
+=======
+>>>>>>> Stashed changes
                     </Box>
                 </Box>
             </Box>

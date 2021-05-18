@@ -1,10 +1,11 @@
 import { Box, Button, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(({ breakpoints }) => ({
     btnContainer: {
         marginTop: '31px',
         marginBottom: '31px',
     },
+
     btn: {
         color: '#707070',
         width: 'auto',
@@ -18,8 +19,13 @@ const useStyles = makeStyles({
                 '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
             background: '#ffffff 0% 0% no-repeat padding-box',
         },
+        [breakpoints.down('sm')]: {
+            height: '53px',
+            width: '',
+        },
     },
-});
+}));
+
 const FeedCategories = () => {
     const classes = useStyles();
     return (

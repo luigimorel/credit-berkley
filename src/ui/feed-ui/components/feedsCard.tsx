@@ -4,7 +4,7 @@ import { format } from 'date-fns';
 import img from '../../../assets/img.jpg';
 import { ReactComponent as LightningIcon } from '../../../assets//feedIcons/Lightining-icon.svg';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(({ breakpoints }) => ({
     feedCard: {
         paddingBottom: '40px',
         marginBottom: '20px',
@@ -19,8 +19,21 @@ const useStyles = makeStyles({
     },
     textContent: {
         margin: '0 31px ',
+        [breakpoints.down('sm')]: {},
     },
-});
+
+    desc: {
+        [breakpoints.down('sm')]: { fontSize: '14px' },
+    },
+    imgCard: {
+        width: 'auto',
+    },
+    img: {
+        maxWidth: '100%',
+        maxHeight: '100%',
+        width: 'auto',
+    },
+}));
 
 const FeedsCard = () => {
     const classes = useStyles();
@@ -28,13 +41,16 @@ const FeedsCard = () => {
 
     return (
         <Box className={classes.feedCard}>
-            <img src={img} alt="" />
+            <img src={img} alt="" className={classes.imgCard} />
 
             <div className={classes.textContent}>
-                <Typography component="p" style={{ margin: '20px 0' }}>
+                <Typography
+                    component="p"
+                    style={{ margin: '20px 0' }}
+                    className={classes.desc}
+                >
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry Contrary to popular belief, Lorem Ipsum
-                    is not simply random text.
+                    typesetting industry.
                 </Typography>
                 <Typography
                     component="p"
