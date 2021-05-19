@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     sidebar: {
-        width: '300px',
+        width: '200px',
     },
 
     feedContainer: {

@@ -8,20 +8,22 @@ import Expenses from '../dashboard/components/expenses';
 import Sidebar from '../feed-ui/components/sidebarComponent';
 import Topbar from '../feed-ui/components/topBarComponent';
 import CreditReportChanges from './components/creditReportChanges';
-import Calculator from './components/calculator';
+// import Calculator from './components/calculator';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
-        background: '#ECF3FD 0% 0% no-repeat padding-box',
+        background: '#EAF1FC  0% 0% no-repeat padding-box',
         paddingLeft: '80px',
         paddingBottom: '10rem',
         [theme.breakpoints.down('lg')]: {
             paddingLeft: '60px',
         },
     },
+
     sidebar: {
-        width: '60px',
+        width: '100px',
     },
+
     feedContainer: {
         marginLeft: '100px',
         width: '845px',
@@ -30,10 +32,12 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '10px',
         },
     },
+
     accountHealthContainer: {
         height: '445px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
+
     creditCardUsage: {
         height: '576px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -44,12 +48,17 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         margin: '1.8rem 0',
     },
+
     calculator: {
-        marginTop: '35px',
+        marginTop: '48px',
         marginLeft: '5rem',
         height: '830px',
         width: '516px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+    },
+
+    topbarContainer: {
+        marginTop: '48px',
     },
 }));
 const CreditCalculator = () => {
@@ -57,8 +66,6 @@ const CreditCalculator = () => {
 
     return (
         <div className={classes.mainContainer}>
-            <Topbar />
-
             <Box display="flex" flexDirection="row">
                 <div className={classes.sidebar}>
                     <Sidebar />
@@ -68,24 +75,25 @@ const CreditCalculator = () => {
                     display="flex"
                     flexDirection="column"
                 >
+                    {' '}
+                    <div className={classes.topbarContainer}>
+                        <Topbar />
+                    </div>
                     <ChartContainer />
                     <div className={classes.creditReports}>
                         <CreditReportChanges />
                     </div>
-
                     <Box className={classes.accountHealthContainer}>
                         <AccountHealth />
                     </Box>
-
                     <Box mt={10} className={classes.creditCardUsage}>
                         <CreditCardUsage />
                     </Box>
-
                     <Expenses />
                 </Box>
-                <Box className={classes.calculator}>
+                {/* <Box className={classes.calculator}>
                     <Calculator />
-                </Box>
+                </Box> */}
             </Box>
         </div>
     );
