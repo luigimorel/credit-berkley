@@ -7,6 +7,7 @@ import { ReactComponent as LightningIcon } from '../../../assets//feedIcons/Ligh
 const useStyles = makeStyles(({ breakpoints }) => ({
     feedCard: {
         paddingBottom: '40px',
+        borderRadius: '10px',
         marginBottom: '20px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -19,19 +20,33 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     },
     textContent: {
         margin: '0 31px ',
-        [breakpoints.down('sm')]: {},
+        [breakpoints.down('sm')]: {
+            margin: '0 13px',
+        },
     },
 
     desc: {
         [breakpoints.down('sm')]: { fontSize: '14px' },
     },
+
     imgCard: {
         width: 'auto',
+        [breakpoints.down('sm')]: {
+            width: '100%',
+            height: '100%',
+        },
     },
-    img: {
-        maxWidth: '100%',
-        maxHeight: '100%',
+
+    feedIconContainer: {
         width: 'auto',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 'auto 0',
+    },
+
+    feedIcons: {
+        height: '20px',
+        margin: 'auto 10px ',
     },
 }));
 
@@ -80,16 +95,12 @@ const FeedsCard = () => {
                     justifyContent="space-between"
                 >
                     <Button className={classes.cardBtn}>Read More</Button>
-                    <Box>
-                        <Button>
-                            <LightningIcon />
-                        </Button>
-                        <Button>
-                            <LightningIcon />
-                        </Button>
-                        <Button>
-                            <LightningIcon />
-                        </Button>
+                    <Box className={classes.feedIconContainer}>
+                        <LightningIcon className={classes.feedIcons} />
+
+                        <LightningIcon className={classes.feedIcons} />
+
+                        <LightningIcon className={classes.feedIcons} />
                     </Box>
                 </Box>
             </div>

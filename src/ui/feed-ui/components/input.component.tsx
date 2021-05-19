@@ -1,4 +1,4 @@
-import { Grid, IconButton, makeStyles, Box } from '@material-ui/core';
+import { Grid, makeStyles, Box, TextField } from '@material-ui/core';
 import { ReactComponent as LightningIcon } from '../../../assets/feedIcons/Lightining-icon.svg';
 
 const useStyles = makeStyles(({ breakpoints }) => ({
@@ -20,24 +20,38 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     input: {
         height: '75px',
         border: 'none',
+        marginLeft: '34px',
         paddingLeft: '15px ',
         width: '541.38px',
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
-        '&::placeholder': { fontSize: '10px' },
         [breakpoints.down('sm')]: {
-            width: '208px',
             height: '42px',
+            width: '208px',
             marginRight: '20px',
             marginLeft: '20px',
+            '&::placeholder': { fontSize: '10px' },
         },
     },
 
-    emojiButtons: {},
     emojiContainer: {
+        alignItems: 'center',
+        marginLeft: '117px',
+
+        justifyContent: 'center',
+        margin: 'auto 0',
         [breakpoints.down('sm')]: {
-            width: '10px',
-            marginRight: '20px',
+            marginLeft: '20px',
+            marginRight: '10px',
+        },
+    },
+
+    inputIcon: {
+        height: '40px',
+        marginRight: '24px',
+        [breakpoints.down('sm')]: {
+            height: '15px',
+            marginRight: '5px',
         },
     },
 }));
@@ -47,28 +61,24 @@ const InputComponent = () => {
     return (
         <div>
             <Grid className={classes.inputContainer}>
-                <input
-                    color="inherit"
+                <TextField
+                    fullWidth
                     className={classes.input}
                     placeholder="Ask a question or Post something"
+                    InputProps={{ disableUnderline: true }}
                 />
 
                 <Box
                     display="flex"
                     flexDirection="row"
-                    justifyContent="space-around"
+                    justifyContent="space-evenly"
                     className={classes.emojiContainer}
                 >
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon height="15px" />
-                    </IconButton>
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon height="15px" />
-                    </IconButton>
+                    <LightningIcon className={classes.inputIcon} />
 
-                    <IconButton className={classes.emojiButtons}>
-                        <LightningIcon height="15px" />
-                    </IconButton>
+                    <LightningIcon className={classes.inputIcon} />
+
+                    <LightningIcon className={classes.inputIcon} />
                 </Box>
             </Grid>
         </div>

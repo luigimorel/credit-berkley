@@ -1,7 +1,6 @@
 import { Box, Button, IconButton, makeStyles } from '@material-ui/core';
 
 import { ReactComponent as Hamburger } from '../../../assets/feedIcons/hamburger.svg';
-import InputComponent from './input.component';
 
 const useStyles = makeStyles(() => ({
     mainContainer: {
@@ -9,7 +8,7 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
-        margin: '25px 25px 25px 25px',
+        margin: '25px 25px 0 0 ',
     },
 
     hamburgerContainer: {
@@ -20,7 +19,6 @@ const useStyles = makeStyles(() => ({
     hamburger: {
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         borderRadius: '50%',
-        right: 0,
     },
 
     joinBtn: {
