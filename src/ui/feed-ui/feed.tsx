@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '70px ',
     },
 }));
+
 const MainFeed = () => {
     const classes = useStyles();
     const { breakpoints } = useTheme();

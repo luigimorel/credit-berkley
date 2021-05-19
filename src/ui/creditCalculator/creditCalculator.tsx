@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Box } from '@material-ui/core';
+import { makeStyles, Box, useTheme, useMediaQuery } from '@material-ui/core';
 
 import AccountHealth from '../dashboard/components/accountHealth';
 import ChartContainer from '../dashboard/components/chartContainer';
@@ -9,6 +9,7 @@ import Sidebar from '../feed-ui/components/sidebarComponent';
 import Topbar from '../feed-ui/components/topBarComponent';
 import CreditReportChanges from './components/creditReportChanges';
 // import Calculator from './components/calculator';
+import MobileCreditCalculator from './components/mobileCreditCalculator';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -63,39 +64,47 @@ const useStyles = makeStyles((theme) => ({
 }));
 const CreditCalculator = () => {
     const classes = useStyles();
+    const { breakpoints } = useTheme();
+    const isMobile = useMediaQuery(breakpoints.down('sm'));
 
     return (
-        <div className={classes.mainContainer}>
-            <Box display="flex" flexDirection="row">
-                <div className={classes.sidebar}>
-                    <Sidebar />
-                </div>
-                <Box
-                    className={classes.feedContainer}
-                    display="flex"
-                    flexDirection="column"
-                >
-                    {' '}
-                    <div className={classes.topbarContainer}>
-                        <Topbar />
-                    </div>
-                    <ChartContainer />
-                    <div className={classes.creditReports}>
-                        <CreditReportChanges />
-                    </div>
-                    <Box className={classes.accountHealthContainer}>
-                        <AccountHealth />
-                    </Box>
-                    <Box mt={10} className={classes.creditCardUsage}>
-                        <CreditCardUsage />
-                    </Box>
-                    <Expenses />
-                </Box>
-                {/* <Box className={classes.calculator}>
+        <>
+            {isMobile ? (
+                <MobileCreditCalculator />
+            ) : (
+                <div className={classes.mainContainer}>
+                    <Box display="flex" flexDirection="row">
+                        <div className={classes.sidebar}>
+                            <Sidebar />
+                        </div>
+                        <Box
+                            className={classes.feedContainer}
+                            display="flex"
+                            flexDirection="column"
+                        >
+                            {' '}
+                            <div className={classes.topbarContainer}>
+                                <Topbar />
+                            </div>
+                            <ChartContainer />
+                            <div className={classes.creditReports}>
+                                <CreditReportChanges />
+                            </div>
+                            <Box className={classes.accountHealthContainer}>
+                                <AccountHealth />
+                            </Box>
+                            <Box mt={10} className={classes.creditCardUsage}>
+                                <CreditCardUsage />
+                            </Box>
+                            <Expenses />
+                        </Box>
+                        {/* <Box className={classes.calculator}>
                     <Calculator />
                 </Box> */}
-            </Box>
-        </div>
+                    </Box>
+                </div>
+            )}
+        </>
     );
 };
 
