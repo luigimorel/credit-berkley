@@ -1,5 +1,6 @@
-import React from 'react';
 import { makeStyles, Box, Typography, Button } from '@material-ui/core';
+
+import ScaledBar from '../components/charts/scaledBar';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -59,7 +60,9 @@ const AccountHealth = () => {
                     $145,000
                 </Typography>
             </Box>
-            <div className={classes.accountBar}></div>
+            <Box style={{ margin: '1rem auto' }}>
+                <ScaledBar value={12565} />
+            </Box>{' '}
             <Box
                 className={classes.balanceContainer}
                 display="flex"

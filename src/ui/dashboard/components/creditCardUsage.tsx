@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Box,
     Button,
@@ -6,8 +5,9 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
+import ScaledBar from './charts/scaledBar';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         margin: '1.5rem ',
     },
@@ -43,7 +43,9 @@ const CreditCardUsage = () => {
             </Typography>
 
             <Box className={classes.chartContainer}>
-                Hello, these are the charts and they will be here....
+                <Box style={{ margin: '1rem auto' }}>
+                    <ScaledBar value={12565} />
+                </Box>{' '}
             </Box>
 
             <Box

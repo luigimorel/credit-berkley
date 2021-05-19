@@ -37,7 +37,6 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     emojiContainer: {
         alignItems: 'center',
         marginLeft: '117px',
-
         justifyContent: 'center',
         margin: 'auto 0',
         [breakpoints.down('sm')]: {
