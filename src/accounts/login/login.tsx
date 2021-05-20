@@ -17,9 +17,9 @@ const useStyles = makeStyles((theme) =>
         container: {
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             display: 'flex',
-            minHeight: '100%',
             alignItems: 'center',
             justifyContent: 'space-around',
+            margin: '0 auto',
             flexDirection: 'row',
         },
 
@@ -116,6 +116,8 @@ const useStyles = makeStyles((theme) =>
         mainContainer: {
             background: '#ECF3FD 0% 0% no-repeat padding-box',
             top: '0px',
+            display: 'flex',
+            flexDirection: 'row',
             [theme.breakpoints.down('xs')]: {
                 margin: '0 auto',
             },

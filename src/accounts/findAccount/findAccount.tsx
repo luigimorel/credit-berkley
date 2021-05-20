@@ -82,8 +82,7 @@ const useStyles = makeStyles((theme) => ({
         width: '335px',
         height: '66px',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
-        boxShadow:
-            'inset 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
+        boxShadow: '3px 3px 6px #b8b9be, -3px -3px 6px #ffffff !important',
         borderRadius: '10px',
         color: '#1D9F6EA2',
         fontSize: '1rem',

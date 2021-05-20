@@ -11,17 +11,20 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         background: '#ECF3FD 0% 0% no-repeat padding-box',
     },
+
     sidebar: {
         width: '215px',
         alignItems: 'center',
         marginTop: '50px',
         alignContent: 'center',
     },
+
     messengerArea: {
         display: 'flex',
         marginTop: '200px',
         flexDirection: 'row',
     },
+
     chatContainer: {
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         marginLeft: '100px',
@@ -38,8 +41,10 @@ const Messenger = () => {
             flexDirection="row"
             justifyContent="space-between"
         >
-            <Sidebar />
-
+            <div className={classes.sidebar}>
+                {' '}
+                <Sidebar />
+            </div>
             <MessengerTopBar />
             <Grid md={12} lg={12} className={classes.messengerArea}>
                 <div>

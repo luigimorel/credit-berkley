@@ -14,8 +14,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '5rem',
         height: '445px',
         width: '852px',
-        alignItems: 'center',
-        alignContent: 'center',
     },
 
     chartsContainer: {
