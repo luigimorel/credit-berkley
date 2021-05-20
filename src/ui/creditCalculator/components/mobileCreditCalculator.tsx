@@ -6,6 +6,7 @@ import ChartContainer from '../../dashboard/components/chartContainer';
 import CreditReportChanges from './creditReportChanges';
 import AccountHealth from '../../dashboard/components/accountHealth';
 import CreditCardUsage from '../../dashboard/components/creditCardUsage';
+import Expenses from '../../dashboard/components/expenses';
 
 const useStyles = makeStyles(() => ({
     mainContainer: {
@@ -37,6 +38,7 @@ const MobileCreditCalculator = () => {
                 <CreditReportChanges />
                 <AccountHealth />
                 <CreditCardUsage />
+                <Expenses />
             </Box>
         </Box>
     );

@@ -17,8 +17,6 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         color: '#000',
         borderRadius: '50%',
         width: '200px',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 
     accountsContainer: { marginTop: '3rem' },
@@ -60,10 +58,8 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         marginTop: '2rem',
         marginLeft: '145px',
         marginRight: '145px',
-        [breakpoints.down('sm')]: {
-            marginLeft: '2rem',
-            marginRight: '2rem',
-        },
+        justifyContent: 'space-between',
+        [breakpoints.down('sm')]: { justifyContent: 'center' },
     },
 
     descText: {
@@ -95,7 +91,6 @@ const ChartContainer = () => {
                 <Box
                     display="flex"
                     flexDirection="row"
-                    justifyContent="space-between"
                     className={classes.chartArea}
                 >
                     <Box className={classes.chart}>

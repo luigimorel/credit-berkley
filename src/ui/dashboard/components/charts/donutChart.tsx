@@ -1,7 +1,7 @@
 import React from 'react';
 import { CircularProgress, makeStyles } from '@material-ui/core';
 
-// Interface for the donut charts
+// Interface for the donut chart
 interface DonutProps {
     value: number;
     size: number;

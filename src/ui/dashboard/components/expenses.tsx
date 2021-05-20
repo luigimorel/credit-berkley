@@ -11,7 +11,7 @@ import Savings from '../../../assets/expenses/savings.jpg';
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
         marginTop: '2rem',
-        marginBottom: "5rem",
+        marginBottom: '5rem',
         height: '445px',
         width: '852px',
         alignItems: 'center',
@@ -29,12 +29,21 @@ const useStyles = makeStyles((theme) => ({
         width: '200px',
     },
 
-    accountsContainer: { marginTop: '3rem' },
+    accountsContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+        },
+    },
     account: {
         height: '190px',
         marginRight: '1.8rem',
         width: '264px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: '',
+        },
     },
 
     textContainer: {
@@ -56,11 +65,10 @@ const useStyles = makeStyles((theme) => ({
     illustration: {
         height: '87px',
         width: '115px',
-        float: 'right',
         marginTop: '1.6rem',
     },
 
-    mainAccountsContainer: {},
+    mainAccountsContainer: { marginTop: '3rem' },
 }));
 
 const accounts: Array<any> = [
@@ -111,149 +119,147 @@ const Expenses = () => {
                 flexDirection="column"
                 className={classes.mainContainer}
             >
-                <Box
-                    display="flex"
-                    flexDirection="row"
-                    className={classes.accountsContainer}
-                >
-                    {/* TO DO: Remove the replicates and put look through the accounts arrays. */}
+                <div className={classes.mainAccountsContainer}>
+                    <Box className={classes.accountsContainer}>
+                        {/* TO DO: Remove the replicates and put look through the accounts arrays. */}
 
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Credit
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                Last checked: Feb 29, 2020
-                            </Typography>
-                        </div>
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Credit
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    Last checked: Feb 29, 2020
+                                </Typography>
+                            </div>
 
-                        <img
-                            src={Credit}
-                            className={classes.illustration}
-                            alt=""
-                        />
-                    </Box>
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Accounts
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                4 active account
-                            </Typography>
-                        </div>
+                            <img
+                                src={Credit}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Accounts
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    4 active account
+                                </Typography>
+                            </div>
 
-                        <img
-                            src={Accounts}
-                            className={classes.illustration}
-                            alt=""
-                        />
-                    </Box>
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Tax
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                Star my taxes now
-                            </Typography>
-                        </div>
+                            <img
+                                src={Accounts}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Tax
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    Star my taxes now
+                                </Typography>
+                            </div>
 
-                        <img
-                            src={Tax}
-                            className={classes.illustration}
-                            alt=""
-                        />
+                            <img
+                                src={Tax}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
                     </Box>
-                </Box>
-                <Box
-                    display="flex"
-                    flexDirection="row"
-                    className={classes.accountsContainer}
-                >
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Auto
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                Link your cars and drivers
-                            </Typography>
-                        </div>
-                        <img
-                            src={Auto}
-                            className={classes.illustration}
-                            alt=""
-                        />
+                    <Box
+                        display="flex"
+                        flexDirection="row"
+                        className={classes.accountsContainer}
+                    >
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Auto
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    Link your cars and drivers
+                                </Typography>
+                            </div>
+                            <img
+                                src={Auto}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Housing
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    Discover your buying power
+                                </Typography>
+                            </div>
+                            <img
+                                src={Housing}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
+                        <Box className={classes.account}>
+                            <div className={classes.textContainer}>
+                                <Typography
+                                    component="p"
+                                    className={classes.accountsHeader}
+                                >
+                                    Savings
+                                </Typography>
+                                <Typography
+                                    component="span"
+                                    className={classes.accountsSpan}
+                                >
+                                    Savings
+                                </Typography>
+                            </div>
+                            <img
+                                src={Savings}
+                                className={classes.illustration}
+                                alt=""
+                            />
+                        </Box>
                     </Box>
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Housing
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                Discover your buying power
-                            </Typography>
-                        </div>
-                        <img
-                            src={Housing}
-                            className={classes.illustration}
-                            alt=""
-                        />
-                    </Box>
-                    <Box className={classes.account}>
-                        <div className={classes.textContainer}>
-                            <Typography
-                                component="p"
-                                className={classes.accountsHeader}
-                            >
-                                Savings
-                            </Typography>
-                            <Typography
-                                component="span"
-                                className={classes.accountsSpan}
-                            >
-                                Savings
-                            </Typography>
-                        </div>
-                        <img
-                            src={Savings}
-                            className={classes.illustration}
-                            alt=""
-                        />
-                    </Box>
-                </Box>
+                </div>
             </Box>
         </>
     );
