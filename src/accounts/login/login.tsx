@@ -90,6 +90,7 @@ const useStyles = makeStyles((theme) =>
             fontSize: '1rem',
             marginTop: '60px',
             opacity: 1,
+            fontWeight: 'bolder',
             textTransform: 'capitalize',
             [theme.breakpoints.down('sm')]: {
                 width: '280px',
@@ -122,6 +123,12 @@ const useStyles = makeStyles((theme) =>
                 margin: '0 auto',
             },
         },
+
+        form: {
+            [theme.breakpoints.down('sm')]: {
+                padding: '10px',
+            },
+        },
     }),
 );
 export default function UserLogin() {
@@ -151,13 +158,7 @@ export default function UserLogin() {
 
     return (
         <div className={classes.mainContainer}>
-            <Grid
-                container
-                className={classes.container}
-                lg={12}
-                md={12}
-                sm={12}
-            >
+            <Grid container className={classes.container}>
                 <Grid item className={classes.logoContainer}>
                     <img src={logo} alt="Credit Berkley" />
                 </Grid>
@@ -167,7 +168,7 @@ export default function UserLogin() {
                         Log In
                     </Typography>
 
-                    <form onSubmit={handleLogIn}>
+                    <form onSubmit={handleLogIn} className={classes.form}>
                         <InputBase
                             className={classes.inputField}
                             autoComplete="email"
@@ -189,7 +190,6 @@ export default function UserLogin() {
                         />
 
                         <Button fullWidth className={classes.btnLogin}>
-                            
                             Log In
                         </Button>
                     </form>
