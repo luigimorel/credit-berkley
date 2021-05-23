@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
             margin: '50px 15px',
         },
     },
-    
+
     logoContainer: {
         margin: '50px 0',
         [theme.breakpoints.down('sm')]: {
@@ -133,13 +133,7 @@ const SignUp = () => {
 
     return (
         <>
-            <Grid
-                container
-                className={classes.container}
-                lg={12}
-                md={12}
-                sm={12}
-            >
+            <Grid container className={classes.container}>
                 <Grid item className={classes.logoContainer}>
                     <img src={logo} alt="Credit Berkley" />
                 </Grid>
@@ -196,7 +190,7 @@ const SignUp = () => {
                     <Typography component="p" className={classes.infoText}>
                         I already have an account,
                         <Link
-                            to="login"
+                            to="/"
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
                             {'   '}

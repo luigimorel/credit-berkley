@@ -1,21 +1,20 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
     Button,
     Theme,
-  Grid,
-  InputBase,
+    Grid,
+    InputBase,
     TextField,
     Box,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
-import { Link } from "react-router-dom";
-import {useFormik} from 'formik'
+    makeStyles,
+    Typography,
+} from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { useFormik } from 'formik';
 
-import logo from "../../assets/bc-logo.jpg";
+import logo from '../../assets/bc-logo.jpg';
 
 const useStyles = makeStyles((theme) => ({
-    
     container: {
         background: '#ECF3FD 0% 0% no-repeat padding-box',
         display: 'flex',
@@ -111,67 +110,66 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const FindAccount = () => {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
 
-  const emailValidation = (email: string) => {
-    const regexPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regexPattern.test(String(email).toLowerCase());
-  };
+    const emailValidation = (email: string) => {
+        const regexPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regexPattern.test(String(email).toLowerCase());
+    };
 
-     const formik = useFormik({
-         initialValues: {
-             email: '',
-           
-         },
-         onSubmit: (values) => {
-             alert(JSON.stringify(values, null, 2));
-         },
-     });
-  return (
-      <>
-          <Grid container className={classes.container} lg={12} md={12} sm={12}>
-              <Grid item className={classes.logoContainer}>
-                  <img src={logo} alt="Credit Berkley" />
-              </Grid>
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+        },
+        onSubmit: (values) => {
+            alert(JSON.stringify(values, null, 2));
+        },
+    });
+    return (
+        <>
+            <Grid container className={classes.container}>
+                <Grid item className={classes.logoContainer}>
+                    <img src={logo} alt="Credit Berkley" />
+                </Grid>
 
-              <Grid item className={classes.boxContainer}>
-                  <Typography component="p" className={classes.header}>
-                      Find your account
-                  </Typography>
+                <Grid item className={classes.boxContainer}>
+                    <Typography component="p" className={classes.header}>
+                        Find your account
+                    </Typography>
 
-                  <Typography component="p" className={classes.infoText}>
-                      Please enter your email address  to reset your password.
-                  </Typography>
+                    <Typography component="p" className={classes.infoText}>
+                        Please enter your email address to reset your password.
+                    </Typography>
 
-                  <InputBase
-                      className={classes.inputField}
-                      autoComplete="email"
-                      type="text"
-                      placeholder="Email"
-                      onChange={(event) => setEmail(event.target.value)}
-                  />
+                    <InputBase
+                        className={classes.inputField}
+                        autoComplete="email"
+                        type="text"
+                        placeholder="Email"
+                        onChange={(event) => setEmail(event.target.value)}
+                    />
 
-                  <Button
-                      className={classes.btnFindAccount}
-                      style={{ margin: '2rem 0 2rem 0' }}
-                  >
-                      <Link
-                          to="/find-account"
-                          style={{ textDecoration: 'none', color: 'inherit' }}
-                      >
-                          <b> Find Account</b>
-                      </Link>
-                  </Button>
+                    <Button
+                        className={classes.btnFindAccount}
+                        style={{ margin: '2rem 0 2rem 0' }}
+                    >
+                        <Link
+                            to="/find-account"
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                        >
+                            <b> Find Account</b>
+                        </Link>
+                    </Button>
 
-                  <Button className={classes.btnCancel}>
-                      <b>Cancel</b>
-                  </Button>
-              </Grid>
-          </Grid>
-      </>
-  );
+                    <Button className={classes.btnCancel}>
+                        <b>Cancel</b>
+                    </Button>
+                </Grid>
+            </Grid>
+        </>
+    );
 };
 
 export default FindAccount;

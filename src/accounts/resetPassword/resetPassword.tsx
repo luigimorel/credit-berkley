@@ -168,13 +168,7 @@ const ResetPassword = () => {
 
     return (
         <div className={classes.mainContainer}>
-            <Grid
-                container
-                className={classes.container}
-                lg={12}
-                md={12}
-                sm={12}
-            >
+            <Grid container className={classes.container}>
                 <Grid item className={classes.logoContainer}>
                     <img src={logo} alt="Credit Berkley" />
                 </Grid>
