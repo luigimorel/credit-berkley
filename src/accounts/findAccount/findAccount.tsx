@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import {
     Button,
-    Theme,
     Grid,
     InputBase,
-    TextField,
-    Box,
     makeStyles,
     Typography,
 } from '@material-ui/core';

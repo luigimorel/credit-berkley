@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     img: {
-        maxWidth: '100%',
+        width: '100%',
         height: 'auto',
         display: 'block',
     },
@@ -123,7 +123,11 @@ const CreditReportChanges = () => {
                     </Box>
                 </Box>
                 <Box alignItems="center" justifyContent="center">
-                    <img src={incomeIneqaulity} alt="income inequality" />
+                    <img
+                        src={incomeIneqaulity}
+                        className={classes.img}
+                        alt="income inequality"
+                    />
                 </Box>
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center">
