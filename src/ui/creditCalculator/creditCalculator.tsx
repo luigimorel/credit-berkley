@@ -61,6 +61,13 @@ const useStyles = makeStyles((theme) => ({
     topbarContainer: {
         marginTop: '48px',
     },
+
+    chartsContainer: {
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            margin: '10px',
+        },
+    },
 }));
 const CreditCalculator = () => {
     const classes = useStyles();
@@ -86,7 +93,10 @@ const CreditCalculator = () => {
                             <div className={classes.topbarContainer}>
                                 <Topbar />
                             </div>
-                            <ChartContainer />
+                            <div className={classes.chartsContainer}>
+                                {' '}
+                                <ChartContainer />
+                            </div>{' '}
                             <div className={classes.creditReports}>
                                 <CreditReportChanges />
                             </div>

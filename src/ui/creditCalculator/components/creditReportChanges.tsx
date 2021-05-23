@@ -4,6 +4,12 @@ import { Button, makeStyles, Box, Typography } from '@material-ui/core';
 import incomeIneqaulity from '../../../assets/expenses/income_ineq.jpg';
 
 const useStyles = makeStyles((theme) => ({
+    mainContainer: {
+        marginTop: '48px',
+        marginLeft: '40px',
+        marginRight: '100px',
+    },
+
     mainHeading: {
         fontSize: '10px',
         color: '#1D9F6E',
@@ -17,13 +23,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
     },
 
-    mainContainer: {
-        marginTop: '48px',
-        marginLeft: '40px',
-        marginRight: '100px',
-    },
-
-    textContainer: {},
     headerPara: {
         color: '#9E9E9E',
         fontSize: '10px',
@@ -33,9 +32,23 @@ const useStyles = makeStyles((theme) => ({
         color: '#1A2E35',
         fontSize: '14px',
     },
-    
-}));
 
+    reportsBtn: {
+        height: '3rem',
+        marginTop: '10px',
+        color: '#1D9F6E',
+        border: '1px solid #1D9F6E',
+        width: '180px',
+        fontSize: '10px',
+        fontWeight: 'bold',
+    },
+
+    img: {
+        maxWidth: '100%',
+        height: 'auto',
+        display: 'block',
+    },
+}));
 
 const CreditReportChanges = () => {
     const classes = useStyles();
@@ -56,7 +69,7 @@ const CreditReportChanges = () => {
                     <Typography component="p" className={classes.minorHeading}>
                         How your accounts look today?
                     </Typography>
-                    <Box className={classes.textContainer} my={2}>
+                    <Box my={2}>
                         <Typography
                             component="p"
                             className={classes.headerPara}
@@ -67,7 +80,7 @@ const CreditReportChanges = () => {
                             USE CU
                         </Typography>
                     </Box>
-                    <Box className={classes.textContainer} my={2}>
+                    <Box my={2}>
                         <Typography
                             component="p"
                             className={classes.headerPara}
@@ -78,7 +91,7 @@ const CreditReportChanges = () => {
                             JPMCB CARD
                         </Typography>
                     </Box>
-                    <Box className={classes.textContainer} my={1}>
+                    <Box my={1}>
                         <Typography
                             component="p"
                             className={classes.headerPara}
@@ -89,7 +102,7 @@ const CreditReportChanges = () => {
                             CAP ONE
                         </Typography>
                     </Box>
-                    <Box className={classes.textContainer} my={2}>
+                    <Box my={2}>
                         <Typography
                             component="p"
                             className={classes.headerPara}
@@ -100,7 +113,7 @@ const CreditReportChanges = () => {
                             USE CU
                         </Typography>
                     </Box>
-                    <Box className={classes.textContainer} my={2}>
+                    <Box my={2}>
                         <Typography
                             component="p"
                             className={classes.headerPara}
@@ -114,17 +127,7 @@ const CreditReportChanges = () => {
                 </Box>
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center">
-                <Button
-                    style={{
-                        height: '3rem',
-                        marginTop: '10px',
-                        color: '#1D9F6E',
-                        border: '1px solid #1D9F6E',
-                        width: '180px',
-                        fontSize: '10px',
-                        fontWeight: 'bold',
-                    }}
-                >
+                <Button className={classes.reportsBtn}>
                     VIEW REPORT CHANGES
                 </Button>
             </Box>{' '}

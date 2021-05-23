@@ -8,9 +8,14 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         marginTop: '35px',
         height: '445px',
         boxShadow: ' 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
+        [breakpoints.down('sm')]: {
+            height: 'auto',
+            width: '100%',
+            marginTop: '1rem',
+        },
     },
 
-    chartsContainer: {},
+    chartsContainer: { marginBottom: '40px' },
 
     chart: {
         height: '200px',
@@ -65,10 +70,10 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     descText: {
         textAlign: 'center',
         marginTop: '45px',
+        [breakpoints.down('sm')]: { marginBottom: '1.5rem' },
     },
 
     reportsBtn: {
-        margin: '0 auto',
         position: 'absolute',
         height: '3rem',
         color: '#1D9F6E',
@@ -77,6 +82,7 @@ const useStyles = makeStyles(({ breakpoints }) => ({
         marginTop: '200px',
         fontWeight: 'bold',
         fontSize: '10px',
+        [breakpoints.down('sm')]: { marginTop: '1rem' },
     },
 }));
 
@@ -103,12 +109,12 @@ const ChartContainer = () => {
                 <Typography component="p" className={classes.descText}>
                     Updated {format(date, ' MMMM dd, yyyy')} - Calculated using{' '}
                     VantageScore 3.0
-                </Typography>
-            </Box>
-            <Box display="flex" alignItems="center" justifyContent="center">
-                <Button className={classes.reportsBtn}>
-                    VIEW REPORT CHANGES
-                </Button>
+                </Typography>{' '}
+                <Box display="flex" alignItems="center" justifyContent="center">
+                    <Button className={classes.reportsBtn}>
+                        VIEW REPORT CHANGES
+                    </Button>
+                </Box>
             </Box>{' '}
         </div>
     );
