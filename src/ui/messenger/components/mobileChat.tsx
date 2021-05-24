@@ -11,11 +11,14 @@ import { FaEllipsisV } from 'react-icons/fa';
 import {
     ArrowBack,
     Attachment,
+    DoneAll,
     EmojiEmotionsOutlined,
     MicRounded,
 } from '@material-ui/icons';
 
 const useStyles = makeStyles(({ breakpoints }) => ({
+    mainContainer: { margin: '0 25px' },
+
     header: {
         height: 'auto   ',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
@@ -98,8 +101,7 @@ const useStyles = makeStyles(({ breakpoints }) => ({
     },
 
     message: {
-        fontWeight: 600,
-        fontSize: '14px',
+        fontSize: '12px',
     },
 
     backBtn: {
@@ -161,119 +163,258 @@ const MobileChat = () => {
                 </Box>
             </Box>
 
-            <Box
-                display="flex"
-                flexDirection="row"
-                className={classes.messageContainer}
-            >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
-                </Box>
+            <Box className={classes.mainContainer}>
                 <Box
-                    className={classes.textContainer}
                     display="flex"
                     flexDirection="row"
-                    justifyContent="space-between"
-                    flexGrow={1}
+                    className={classes.messageContainer}
                 >
                     <Box>
-                        <Typography component="p" className={classes.message}>
-                            Why do you have to go to Indonesia?
-                        </Typography>
-                        <Typography component="p" style={{ marginTop: '10px' }}>
-                            <span
-                                style={{ color: '#1D9F6E', fontSize: '10px' }}
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box
+                        className={classes.textContainer}
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="space-between"
+                        flexGrow={1}
+                    >
+                        <Box>
+                            <Typography component="p">
+                                <span
+                                    style={{
+                                        color: '#1D9F6E',
+                                        fontWeight: 'bold',
+                                        fontSize: '14px',
+                                    }}
+                                >
+                                    Wildan Wari
+                                </span>
+                            </Typography>
+                            <Typography
+                                component="p"
+                                className={classes.message}
                             >
-                                By Wildan Wari
-                            </span>
-                        </Typography>
-                    </Box>
-                    <Box style={{ float: 'right', color: '#9E9E9E' }}>
-                        12:30
+                                Why do you have to go to Indonesia?
+                            </Typography>
+                        </Box>
+                        <Box
+                            style={{
+                                float: 'right',
+                                color: '#9E9E9E',
+                                fontSize: '10px',
+                            }}
+                        >
+                            12:30 {'  '} <DoneAll />
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
-            <Divider />
-
-            {/* Duplicates  */}
-            <Box
-                display="flex"
-                flexDirection="row"
-                className={classes.messageContainer}
-            >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
-                </Box>
+                <Divider />
+                {/* Duplicates  */}
                 <Box
-                    className={classes.textContainer}
                     display="flex"
                     flexDirection="row"
-                    justifyContent="space-between"
-                    flexGrow={1}
+                    className={classes.messageContainer}
                 >
                     <Box>
-                        <Typography component="p" className={classes.message}>
-                            Why do you have to go to Indonesia?
-                        </Typography>
-                        <Typography component="p" style={{ marginTop: '10px' }}>
-                            <span
-                                style={{ color: '#1D9F6E', fontSize: '10px' }}
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box
+                        className={classes.textContainer}
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="space-between"
+                        flexGrow={1}
+                    >
+                        <Box>
+                            <Typography component="p">
+                                <span
+                                    style={{
+                                        color: '#1D9F6E',
+                                        fontWeight: 'bold',
+                                        fontSize: '12px',
+                                    }}
+                                >
+                                    Wildan Wari
+                                </span>
+                            </Typography>
+                            <Typography
+                                component="p"
+                                className={classes.message}
                             >
-                                By Wildan Wari
-                            </span>
-                        </Typography>
-                    </Box>
-                    <Box style={{ float: 'right', color: '#9E9E9E' }}>
-                        12:30
+                                Why do you have to go to Indonesia?
+                            </Typography>
+                        </Box>
+                        <Box
+                            style={{
+                                float: 'right',
+                                color: '#9E9E9E',
+                                fontSize: '10px',
+                            }}
+                        >
+                            12:30 {'  '} <DoneAll />
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
-            <Divider />
-            <Box
-                display="flex"
-                flexDirection="row"
-                className={classes.messageContainer}
-            >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
-                </Box>
+                <Divider />
                 <Box
-                    className={classes.textContainer}
                     display="flex"
                     flexDirection="row"
-                    justifyContent="space-between"
-                    flexGrow={1}
+                    className={classes.messageContainer}
                 >
                     <Box>
-                        <Typography component="p" className={classes.message}>
-                            Why do you have to go to Indonesia?
-                        </Typography>
-                        <Typography component="p" style={{ marginTop: '10px' }}>
-                            <span
-                                style={{ color: '#1D9F6E', fontSize: '10px' }}
-                            >
-                                By Wildan Wari
-                            </span>
-                        </Typography>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
                     </Box>
-                    <Box style={{ float: 'right', color: '#9E9E9E' }}>
-                        12:30
+                    <Box
+                        className={classes.textContainer}
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="space-between"
+                        flexGrow={1}
+                    >
+                        <Box>
+                            <Typography component="p">
+                                <span
+                                    style={{
+                                        color: '#1D9F6E',
+                                        fontSize: '12px',
+                                        fontWeight: 'bold',
+                                    }}
+                                >
+                                    Wildan Wari
+                                </span>
+                            </Typography>
+                            <Typography
+                                component="p"
+                                className={classes.message}
+                            >
+                                Why do you have to go to Indonesia?
+                            </Typography>
+                        </Box>
+                        <Box
+                            style={{
+                                float: 'right',
+                                color: '#9E9E9E',
+                                fontSize: '10px',
+                            }}
+                        >
+                            12:30 {'  '} <DoneAll />
+                        </Box>
                     </Box>
                 </Box>
+                <Divider />
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    className={classes.messageContainer}
+                >
+                    <Box>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box
+                        className={classes.textContainer}
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="space-between"
+                        flexGrow={1}
+                    >
+                        <Box>
+                            <Typography component="p">
+                                <span
+                                    style={{
+                                        color: '#1D9F6E',
+                                        fontSize: '12px',
+                                        fontWeight: 'bold',
+                                    }}
+                                >
+                                    Wildan Wari
+                                </span>
+                            </Typography>
+                            <Typography
+                                component="p"
+                                className={classes.message}
+                            >
+                                Why do you have to go to Indonesia?
+                            </Typography>
+                        </Box>
+                        <Box
+                            style={{
+                                color: '#9E9E9E',
+                                fontSize: '10px',
+                            }}
+                        >
+                            12:30 {'  '} <DoneAll />
+                        </Box>
+                    </Box>
+                </Box>
+                <Divider />
+                <Box
+                    display="flex"
+                    flexDirection="row"
+                    className={classes.messageContainer}
+                >
+                    <Box>
+                        <img
+                            src={placeholderImage}
+                            alt=""
+                            className={classes.profileImage}
+                        />
+                    </Box>
+                    <Box
+                        className={classes.textContainer}
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="space-between"
+                        flexGrow={1}
+                    >
+                        <Box>
+                            <Typography component="p">
+                                <span
+                                    style={{
+                                        color: '#1D9F6E',
+                                        fontSize: '12px',
+                                        fontWeight: 'bold',
+                                    }}
+                                >
+                                    Wildan Wari
+                                </span>
+                            </Typography>
+                            <Typography
+                                component="p"
+                                className={classes.message}
+                            >
+                                Why do you have to go to Indonesia?
+                            </Typography>
+                        </Box>
+                        <Box
+                            style={{
+                                float: 'right',
+                                color: '#9E9E9E',
+                                fontSize: '10px',
+                            }}
+                        >
+                            12:30 {'  '} <DoneAll />
+                        </Box>
+                    </Box>
+                </Box>
+                <Divider />
             </Box>
-            <Divider />
             <Box
                 display="flex"
                 flexDirection="row"
@@ -287,6 +428,7 @@ const MobileChat = () => {
                     style={{
                         width: '100%',
                         height: 'auto',
+                        background: '#ECF3FD',
                         boxShadow:
                             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
                     }}
