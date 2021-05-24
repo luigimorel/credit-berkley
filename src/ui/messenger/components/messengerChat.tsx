@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     makeStyles,
     Box,
@@ -6,13 +6,14 @@ import {
     TextField,
     Divider,
 } from '@material-ui/core';
+
 import { ReactComponent as Ellipsis } from '../../../assets/feedIcons/Ellipsis.svg';
 import placeholderImage from '../../../assets/person.jpg';
 import { FaThumbtack } from 'react-icons/fa';
 import { SearchRounded } from '@material-ui/icons';
 import Messages from './messages';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         width: '750px',
     },
@@ -60,15 +61,14 @@ const useStyles = makeStyles((theme) => ({
 
     pinnedMessage: {
         height: '75px',
-        marginRight: '20px',
         alignItems: 'center',
         boxShadow:
             'inset 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
     },
 
     searchIcon: {
-        marginBottom: '110px',
-        // marginBottom: '100px',
+        color: '#69BDA2',
+        marginRight: '1rem',
     },
 
     messageContainer: {
@@ -152,12 +152,14 @@ const MessengerChat = () => {
                     flexDirection="row"
                     className={classes.iconsContainer}
                 >
-                    <SearchRounded color="secondary" fontSize="large" />
+                    <SearchRounded
+                        className={classes.searchIcon}
+                        fontSize="large"
+                    />
 
                     <Ellipsis color="#69BDA2" height="2rem" />
                 </Box>
             </Box>
-            {/* this is the erros that we shall have to move on with if this is what we need to do. Do you t hink we shall be ablt to preceed as intended?  */}
             <Box
                 display="flex"
                 flexDirection="row"

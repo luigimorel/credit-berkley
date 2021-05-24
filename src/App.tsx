@@ -9,6 +9,7 @@ import Dashboard from './ui/dashboard/dashboard';
 import Messenger from './ui/messenger/messenger';
 import CreditCalculator from './ui/creditCalculator/creditCalculator';
 import SecondaryFeed from './ui/secFeed/secondaryFeed';
+import MobileChat from './ui/messenger/components/mobileChat';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route exact path="/feed" component={Feed} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/messenger" component={Messenger} />
+                <Route exact path="/chat" component={MobileChat} />
                 <Route
                     exact
                     path="/credit-calculator"

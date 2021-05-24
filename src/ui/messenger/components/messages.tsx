@@ -71,8 +71,9 @@ const Messages = () => {
                 <Box className={classes.textContainer}>
                     <Box
                         display="flex"
-                        flexDirection="column"
-                        justifyContent="space-around"
+                        flexDirection="row"
+                        flexGrow={1}
+                        justifyContent="space-between"
                     >
                         <Typography component="p">
                             <span style={{ color: '#1D9F6E' }}>
@@ -83,7 +84,8 @@ const Messages = () => {
                     <Typography component="p" className={classes.message}>
                         Why do you have to go to Indonesia ?
                     </Typography>
-                </Box>
+                </Box>{' '}
+                <Box style={{ float: 'right', color: '#9E9E9E' }}>12:30 </Box>
             </Box>
             <Divider style={{ margin: '0 30px' }} />
             <Box
@@ -116,7 +118,6 @@ const Messages = () => {
                 </Box>
             </Box>
             <Divider style={{ margin: '0 30px' }} />
-
 
             <Box
                 display="flex"
@@ -152,8 +153,6 @@ const Messages = () => {
                         Why do you have to go to Indonesia ?
                     </Typography>
                 </Box>
-
-
             </Box>
             <Divider style={{ margin: '0 30px' }} />
         </div>

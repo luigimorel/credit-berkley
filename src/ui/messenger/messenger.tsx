@@ -56,7 +56,6 @@ const Messenger = () => {
                     justifyContent="space-between"
                 >
                     <div className={classes.sidebar}>
-                        {' '}
                         <Sidebar />
                     </div>
                     <MessengerTopBar />
