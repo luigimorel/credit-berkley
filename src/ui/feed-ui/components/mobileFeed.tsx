@@ -25,6 +25,7 @@ const useStyles = makeStyles(() => ({
 
 const MobileFeed = () => {
     const classes = useStyles();
+
     return (
         <Box
             display="flex"

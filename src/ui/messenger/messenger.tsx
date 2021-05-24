@@ -1,10 +1,17 @@
 import React from 'react';
-import { makeStyles, Grid, Box } from '@material-ui/core';
+import {
+    makeStyles,
+    Grid,
+    Box,
+    useTheme,
+    useMediaQuery,
+} from '@material-ui/core';
 
 import Sidebar from '../feed-ui/components/sidebarComponent';
 import MessengerTopBar from './components/messengerTopBar';
 import MessengerSideBar from './components/messengerSideBar';
 import MessengerChat from './components/messengerChat';
+import MessengerMobile from './components/messengerMobile';
 
 const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -34,27 +41,36 @@ const useStyles = makeStyles((theme) => ({
 const Messenger = () => {
     const classes = useStyles();
 
+    const { breakpoints } = useTheme();
+    const isMobile = useMediaQuery(breakpoints.down('sm'));
+
     return (
-        <Box
-            className={classes.mainContainer}
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-        >
-            <div className={classes.sidebar}>
-                {' '}
-                <Sidebar />
-            </div>
-            <MessengerTopBar />
-            <Grid md={12} lg={12} className={classes.messengerArea}>
-                <div>
-                    <MessengerSideBar />
-                </div>
-                <div className={classes.chatContainer}>
-                    <MessengerChat />
-                </div>
-            </Grid>
-        </Box>
+        <>
+            {isMobile ? (
+                <MessengerMobile />
+            ) : (
+                <Box
+                    className={classes.mainContainer}
+                    display="flex"
+                    flexDirection="row"
+                    justifyContent="space-between"
+                >
+                    <div className={classes.sidebar}>
+                        {' '}
+                        <Sidebar />
+                    </div>
+                    <MessengerTopBar />
+                    <Grid md={12} lg={12} className={classes.messengerArea}>
+                        <div>
+                            <MessengerSideBar />
+                        </div>
+                        <div className={classes.chatContainer}>
+                            <MessengerChat />
+                        </div>
+                    </Grid>
+                </Box>
+            )}
+        </>
     );
 };
 
