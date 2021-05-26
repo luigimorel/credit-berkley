@@ -5,8 +5,6 @@ import {
     makeStyles,
     Box,
 } from '@material-ui/core';
-
-import placeholderImage from '../../../assets/person.jpg';
 import { FaEllipsisV } from 'react-icons/fa';
 import {
     ArrowBack,
@@ -15,6 +13,8 @@ import {
     EmojiEmotionsOutlined,
     MicRounded,
 } from '@material-ui/icons';
+
+import placeholderImage from '../../../assets/person.jpg';
 
 const useStyles = makeStyles(({ breakpoints }) => ({
     mainContainer: { margin: '0 25px' },
@@ -359,7 +359,7 @@ const MobileChat = () => {
                                 fontSize: '10px',
                             }}
                         >
-                            12:30 {'  '} <DoneAll />
+                            12:30 <DoneAll />
                         </Box>
                     </Box>
                 </Box>
@@ -409,7 +409,7 @@ const MobileChat = () => {
                                 fontSize: '10px',
                             }}
                         >
-                            12:30 {'  '} <DoneAll />
+                            12:30 <DoneAll />
                         </Box>
                     </Box>
                 </Box>
@@ -418,6 +418,7 @@ const MobileChat = () => {
             <Box
                 display="flex"
                 flexDirection="row"
+                width="100%"
                 justifyContent="space-around"
                 className={classes.messageInput}
             >
@@ -425,6 +426,7 @@ const MobileChat = () => {
                     style={{ margin: '0 20px', color: '#7C8DB5' }}
                 />
                 <TextField
+                    fullWidth
                     style={{
                         width: '100%',
                         height: 'auto',
