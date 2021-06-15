@@ -89,14 +89,12 @@ const CreditCalculator = () => {
                             display="flex"
                             flexDirection="column"
                         >
-                            {' '}
                             <div className={classes.topbarContainer}>
                                 <Topbar />
                             </div>
                             <div className={classes.chartsContainer}>
-                                {' '}
                                 <ChartContainer />
-                            </div>{' '}
+                            </div>
                             <div className={classes.creditReports}>
                                 <CreditReportChanges />
                             </div>

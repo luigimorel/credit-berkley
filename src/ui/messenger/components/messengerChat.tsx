@@ -109,7 +109,7 @@ const useStyles = makeStyles(() => ({
 const MessengerChat = () => {
     const classes = useStyles();
 
-    const [MessengerMenu, setMessengerMenu] = useState(false);
+    const [messengerMenu, setMessengerMenu] = useState(false);
     const [searchMessages, setSearchMessages] = useState(' ');
 
     return (
@@ -140,7 +140,7 @@ const MessengerChat = () => {
                             Into The Cryptoverse{' '}
                         </Typography>
                         <Typography component="p">
-                            27, 145 members,{' '}
+                            27, 145 members{' '}
                             <span style={{ color: '#1D9F6E' }}>
                                 1649 online{' '}
                             </span>
@@ -167,13 +167,17 @@ const MessengerChat = () => {
                 className={classes.pinnedMessage}
             >
                 <Box>
-                    <Typography variant="body1" style={{ color: '#39AB80' }}>
+                    <Typography
+                        variant="body1"
+                        style={{ color: '#39AB80' }}
+                        data-test-id="pinned-message"
+                    >
                         <Divider orientation="vertical" />
                         Pinned Message
                     </Typography>
+                    <Divider orientation="vertical" />
 
                     <Typography component="p">
-                        <Divider orientation="vertical" />
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry
                     </Typography>
@@ -196,7 +200,10 @@ const MessengerChat = () => {
                 <TextField
                     style={{ width: '690px' }}
                     placeholder="Ask a Question or Post a Comment"
-                    InputProps={{ disableUnderline: true }}
+                    InputProps={{
+                        disableUnderline: true,
+                    }}
+                    inputProps={{ 'data-testid': 'question-input' }}
                 />
                 <FaThumbtack style={{ margin: '0 20px' }} />
                 <FaThumbtack style={{ margin: '0 20px' }} />

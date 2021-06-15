@@ -209,7 +209,7 @@ const MobileChat = () => {
                                 fontSize: '10px',
                             }}
                         >
-                            12:30 {'  '} <DoneAll />
+                            12:30 <DoneAll />
                         </Box>
                     </Box>
                 </Box>
@@ -260,7 +260,7 @@ const MobileChat = () => {
                                 fontSize: '10px',
                             }}
                         >
-                            12:30 {'  '} <DoneAll />
+                            12:30 <DoneAll />
                         </Box>
                     </Box>
                 </Box>
@@ -310,7 +310,7 @@ const MobileChat = () => {
                                 fontSize: '10px',
                             }}
                         >
-                            12:30 {'  '} <DoneAll />
+                            12:30 <DoneAll />
                         </Box>
                     </Box>
                 </Box>

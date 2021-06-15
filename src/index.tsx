@@ -4,8 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import {createMuiTheme, ThemeProvider} from "@material-ui/core"
-
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 
 declare module '@material-ui/core/styles/createPalette' {
     export interface Palette {
@@ -56,9 +55,7 @@ const theme = createMuiTheme({
 ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <App />
         </ThemeProvider>
     </React.StrictMode>,
     document.getElementById('root'),

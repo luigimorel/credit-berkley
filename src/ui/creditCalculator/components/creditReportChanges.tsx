@@ -3,7 +3,7 @@ import { Button, makeStyles, Box, Typography } from '@material-ui/core';
 
 import incomeIneqaulity from '../../../assets/expenses/income_ineq.jpg';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         marginTop: '48px',
         marginLeft: '40px',

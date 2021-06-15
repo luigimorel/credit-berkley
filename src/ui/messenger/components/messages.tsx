@@ -1,16 +1,10 @@
 import React from 'react';
 
-import {
-    makeStyles,
-    Box,
-    Typography,
-    InputBase,
-    Divider,
-} from '@material-ui/core';
+import { makeStyles, Box, Typography, Divider } from '@material-ui/core';
 
 import placeholderImage from '../../../assets/person.jpg';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     messageContainer: {
         marginLeft: '3rem',
         marginBottom: '2rem',
@@ -86,73 +80,6 @@ const Messages = () => {
                     </Typography>
                 </Box>{' '}
                 <Box style={{ float: 'right', color: '#9E9E9E' }}>12:30 </Box>
-            </Box>
-            <Divider style={{ margin: '0 30px' }} />
-            <Box
-                display="flex"
-                flexDirection="row"
-                className={classes.messageContainer}
-            >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
-                </Box>
-                <Box className={classes.textContainer}>
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        justifyContent="space-between"
-                    >
-                        <Typography component="p">
-                            <span style={{ color: '#1D9F6E' }}>
-                                Wildan Wari
-                            </span>
-                        </Typography>
-                    </Box>
-                    <Typography component="p" className={classes.message}>
-                        Why do you have to go to Indonesia ?
-                    </Typography>
-                </Box>
-            </Box>
-            <Divider style={{ margin: '0 30px' }} />
-
-            <Box
-                display="flex"
-                flexDirection="row"
-                className={classes.messageContainer}
-            >
-                <Box>
-                    <img
-                        src={placeholderImage}
-                        alt=""
-                        className={classes.profileImage}
-                    />
-                </Box>
-
-                <Box className={classes.textContainer}>
-                    <Box
-                        display="flex"
-                        flexDirection="row"
-                        justifyContent="space-between"
-                    >
-                        <Typography component="p">
-                            <span style={{ color: '#1D9F6E' }}>
-                                Wildan Wari
-                            </span>
-                        </Typography>{' '}
-                        <Typography component="p">
-                            <span style={{ color: '#1D9F6E' }}>
-                                Wildan Wari
-                            </span>
-                        </Typography>
-                    </Box>
-                    <Typography component="p" className={classes.message}>
-                        Why do you have to go to Indonesia ?
-                    </Typography>
-                </Box>
             </Box>
             <Divider style={{ margin: '0 30px' }} />
         </div>
