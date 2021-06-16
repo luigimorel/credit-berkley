@@ -6,7 +6,7 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 
 import logo from '../../assets/bc-logo.jpg';
@@ -141,23 +141,21 @@ const SignUp = () => {
                 <Grid item className={classes.boxContainer}>
                     <Typography
                         component="p"
-                        variant="primary"
-                        bold
+                        variant="h1"
                         className={classes.header}
                     >
-                        Sign Up{' '}
+                        Sign Up
                     </Typography>
                     <form onSubmit={formik.handleSubmit}>
                         <InputBase
                             className={classes.inputField}
-                            autoComplete="emial"
+                            autoComplete="email"
                             type="text"
                             placeholder="Email"
                             onChange={(event) => setEmail(event.target.value)}
                         />
                         <InputBase
                             className={classes.inputField}
-                            autoComplete
                             type="text"
                             placeholder="Password"
                             onChange={(event) =>
@@ -183,19 +181,26 @@ const SignUp = () => {
                             By clicking Create Account; I accept the terms of
                             service.
                         </Typography>
-                        <Button className={classes.createAccount}>
+                        <Button
+                            data-testid="create-account"
+                            className={classes.createAccount}
+                        >
                             Create Account
                         </Button>
                     </form>
                     <Typography component="p" className={classes.infoText}>
                         I already have an account,
-                        <Link
-                            to="/"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                            {'   '}
-                            <b>Sign In</b>
-                        </Link>
+                        <BrowserRouter>
+                            <Link
+                                to="/"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <b>Sign In</b>
+                            </Link>
+                        </BrowserRouter>
                     </Typography>
                 </Grid>
             </Grid>

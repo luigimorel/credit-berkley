@@ -7,7 +7,6 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
-import { BrowserRouter, Link } from 'react-router-dom';
 import {} from 'formik';
 
 import logo from '../../assets/bc-logo.jpg';
