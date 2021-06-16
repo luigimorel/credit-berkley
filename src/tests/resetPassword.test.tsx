@@ -8,6 +8,5 @@ test('test the account submit button', () => {
     const submit = getByTestId('account-password-reset');
 
     fireEvent.change(password, { target: { value: 'password' } });
-
     expect(submit).not.toHaveClass('Mui-disabled');
 });
