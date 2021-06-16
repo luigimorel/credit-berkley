@@ -5,7 +5,6 @@ import {
     makeStyles,
     Divider,
 } from '@material-ui/core';
-import { format } from 'date-fns';
 
 import MobileMenu from '../../feed-ui/components/mobileMenu';
 import placeholderImage from '../../../assets/person.jpg';

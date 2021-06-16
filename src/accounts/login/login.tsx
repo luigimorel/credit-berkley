@@ -7,7 +7,7 @@ import {
     createStyles,
     Typography,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 
 import logo from '../../assets/bc-logo.jpg';
@@ -198,20 +198,30 @@ export default function UserLogin() {
                         style={{ margin: '1.5rem 0 1.5rem 0' }}
                     >
                         Don't have an account?
-                        <Link
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                            to="/create-account"
-                        >
-                            <b>{'  '}Create Now!</b>
-                        </Link>
+                        <BrowserRouter>
+                            <Link
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                                to="/create-account"
+                            >
+                                <b>{'  '}Create Now!</b>
+                            </Link>
+                        </BrowserRouter>
                     </Typography>
                     <Button fullWidth className={classes.btnCreateAccount}>
-                        <Link
-                            to="/create-account"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                            <b>Create Account</b>
-                        </Link>
+                        <BrowserRouter>
+                            <Link
+                                to="/create-account"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <b>Create Account</b>
+                            </Link>
+                        </BrowserRouter>
                     </Button>
                 </Grid>
             </Grid>

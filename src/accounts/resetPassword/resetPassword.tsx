@@ -7,7 +7,7 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import {} from 'formik';
 
 import logo from '../../assets/bc-logo.jpg';
@@ -179,9 +179,10 @@ const ResetPassword = () => {
                     </Typography>
                     <form>
                         <Box className={classes.otpWrapper}>
-                            {CODE_LENGTH.map((v, index) => {
+                            {CODE_LENGTH.map((_, index) => {
                                 return (
                                     <InputBase
+                                        key={index}
                                         className={classes.otpInputField}
                                         inputProps={{ maxLength: 1 }}
                                         type="number"
@@ -195,6 +196,7 @@ const ResetPassword = () => {
                         <InputBase
                             className={classes.inputField}
                             type="text"
+                            value={password}
                             placeholder="New Password"
                             onChange={(event) =>
                                 setPassword(event.target.value)
@@ -205,15 +207,17 @@ const ResetPassword = () => {
                             className={classes.btnFindAccount}
                             style={{ margin: '2rem 0 2rem 0' }}
                         >
-                            <Link
-                                to="reset-password"
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                }}
-                            >
-                                <b>Reset</b>
-                            </Link>
+                            <BrowserRouter>
+                                <Link
+                                    to="reset-password"
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'inherit',
+                                    }}
+                                >
+                                    <b>Reset</b>
+                                </Link>
+                            </BrowserRouter>
                         </Button>
                     </form>
 

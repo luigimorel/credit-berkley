@@ -1,5 +1,5 @@
 import UserLogin from './accounts/login/login';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import FindAccount from './accounts/findAccount/findAccount';
 import SignUp from './accounts/signup/signUp';
 import ResetPassword from './accounts/resetPassword/resetPassword';
@@ -14,7 +14,7 @@ import MobileChat from './ui/messenger/components/mobileChat';
 const App = () => {
     return (
         <>
-            <BrowserRouter>
+            <Router>
                 <Switch>
                     <Route exact path="/" component={UserLogin} />
                     <Route exact path="/create-account" component={SignUp} />
@@ -44,7 +44,7 @@ const App = () => {
                         component={SecondaryFeed}
                     />
                 </Switch>
-            </BrowserRouter>
+            </Router>
         </>
     );
 };

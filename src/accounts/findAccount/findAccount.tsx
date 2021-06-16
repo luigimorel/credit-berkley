@@ -6,7 +6,7 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 
 import logo from '../../assets/bc-logo.jpg';
@@ -152,12 +152,17 @@ const FindAccount = () => {
                         className={classes.btnFindAccount}
                         style={{ margin: '2rem 0 2rem 0' }}
                     >
-                        <Link
-                            to="/find-account"
-                            style={{ textDecoration: 'none', color: 'inherit' }}
-                        >
-                            <b> Find Account</b>
-                        </Link>
+                        <BrowserRouter>
+                            <Link
+                                to="/find-account"
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'inherit',
+                                }}
+                            >
+                                <b> Find Account</b>
+                            </Link>
+                        </BrowserRouter>
                     </Button>
 
                     <Button className={classes.btnCancel}>
