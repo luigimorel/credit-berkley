@@ -197,6 +197,9 @@ const ResetPassword = () => {
                             className={classes.inputField}
                             type="text"
                             value={password}
+                            inputProps={{
+                                'data-testid': 'account-new-password',
+                            }}
                             placeholder="New Password"
                             onChange={(event) =>
                                 setPassword(event.target.value)
@@ -206,18 +209,9 @@ const ResetPassword = () => {
                         <Button
                             className={classes.btnFindAccount}
                             style={{ margin: '2rem 0 2rem 0' }}
+                            data-testid="account-password-reset"
                         >
-                            <BrowserRouter>
-                                <Link
-                                    to="reset-password"
-                                    style={{
-                                        textDecoration: 'none',
-                                        color: 'inherit',
-                                    }}
-                                >
-                                    <b>Reset</b>
-                                </Link>
-                            </BrowserRouter>
+                            <b>Reset</b>
                         </Button>
                     </form>
 
