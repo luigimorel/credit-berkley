@@ -12,7 +12,7 @@ import {
     Checkbox,
     MenuList,
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter } from 'react-router-dom';
 
 import { useFormik } from 'formik';
 import clsx from 'clsx';
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         width: '60%',
         [theme.breakpoints.down('md')]: {
             width: 'auto',
-            flexDirection: "row",
+            flexDirection: 'row',
             margin: '0 auto',
         },
     },
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 3.4rem 0 3.4rem',
         flexDirection: 'row',
         [theme.breakpoints.down('sm')]: {
-            flexDirection: " column",
+            flexDirection: ' column',
             margin: '0 auto',
             height: 'auto',
             width: '350px',
@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     signUpContainer: {
         height: '200px',
         borderRadius: '10px',
-        paddingBottom: "20px",
+        paddingBottom: '20px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         [theme.breakpoints.down('md')]: {
             height: 'auto',
@@ -173,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: '10px',
         boxShadow: '6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important',
         opacity: 1,
-        marginTop: "10px",
+        marginTop: '10px',
         paddingTop: '1px',
         position: 'relative',
         [theme.breakpoints.down('sm')]: {
@@ -291,8 +291,8 @@ const SignUpSecondary = () => {
                 />
             </div>
 
-            <Grid md={6} sm={12} lg={12} className={classes.formContainer}>
-                <Grid item className={classes.form}>
+            <Grid className={classes.formContainer}>
+                <Grid md={6} sm={12} lg={12} item className={classes.form}>
                     <div className={classes.signUpContainer}>
                         <div className={classes.textContainer}>
                             <Typography
@@ -323,7 +323,13 @@ const SignUpSecondary = () => {
                         </Typography>
                     </div>
 
-                    <Grid className={classes.formInputContainer}>
+                    <Grid
+                        item
+                        md={6}
+                        sm={12}
+                        lg={12}
+                        className={classes.formInputContainer}
+                    >
                         <form onSubmit={formik.handleSubmit}>
                             <Grid>
                                 <Typography
@@ -584,12 +590,14 @@ const SignUpSecondary = () => {
                                         value={formik.values.checkBox}
                                     />
                                     I agree to the{' '}
-                                    <Link
-                                        to="/terms-of-service"
-                                        className={classes.termsUrl}
-                                    >
-                                        Terms of Service
-                                    </Link>
+                                    <BrowserRouter>
+                                        <Link
+                                            to="/terms-of-service"
+                                            className={classes.termsUrl}
+                                        >
+                                            Terms of Service
+                                        </Link>
+                                    </BrowserRouter>
                                 </div>
                             </Grid>
 
