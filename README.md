@@ -2,6 +2,8 @@
 
 This project was built as a test task to further solidify my knownledge about ReactJS and it's inner workings. (WIP - I hope I will finish this soon.)
 
+![Screenshot of the page](./img.jpg)
+
 ### Setup Scripts
 
 I used `yarn` as the package manager.

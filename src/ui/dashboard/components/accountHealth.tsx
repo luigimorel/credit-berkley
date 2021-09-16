@@ -2,7 +2,7 @@ import { makeStyles, Box, Typography, Button } from '@material-ui/core';
 
 import ScaledBar from '../components/charts/scaledBar';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     mainContainer: {
         marginTop: '48px',
         marginLeft: '40px',
